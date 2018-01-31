@@ -93,6 +93,6 @@ Using a XML-String:
 	Console.WriteLine($@"TestObject.Name=>{testObject.Name}");
     Console.WriteLine($@"TestObject.ConnectionString=>{testObject.ConnectionString}");
     
-#### I hope this Help in many Projects :)
+#### I hope this helps in many Projects :)
 Please feel free to comment or suggest features.
 
