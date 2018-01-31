@@ -10,7 +10,9 @@ At Package-Manager-Konsole:
 Usage
 ----------
 
-#### Serialize Objects
+Serialize Objects
+----------
+
 ```c#
 //Object to be Serialized
 public class TestObject
@@ -20,7 +22,7 @@ public class TestObject
 }
 ```
 
-##### Serialize the Object to a File.
+Serialize the Object to a File.
 
 ```c#
 using EasyXMLSerializer;
@@ -86,12 +88,15 @@ var testObject = deserializeTool.ReadXmlFile<TestObject>();
 
 Console.WriteLine($@"TestObject.Name=>{testObject.Name}");
 Console.WriteLine($@"TestObject.ConnectionString=>{testObject.ConnectionString}");
-//...
+
+//---
+
 //Alternative
 var deserializeTool = new SerializeTool();
 var testObject = deserializeTool.ReadXmlFile<TestObject>("TestObject.xml");
 Console.WriteLine($@"TestObject.Name=>{testObject.Name}");
 Console.WriteLine($@"TestObject.ConnectionString=>{testObject.ConnectionString}");
+
 ```
 
 Using a XML-String:
