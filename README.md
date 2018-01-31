@@ -41,6 +41,7 @@ serializeTool.WriteXmlFile(testObject);
 
 //...
 ```
+
 Result
 
 ```XML
@@ -101,7 +102,7 @@ var testObject = deserializeTool.ReadXmlFromString<TestObject>(xmlString);
 
 Console.WriteLine($@"TestObject.Name=>{testObject.Name}");
 Console.WriteLine($@"TestObject.ConnectionString=>{testObject.ConnectionString}");
-```c#
+```
 
 #### I hope this helps in many Projects :)
 Please feel free to comment or suggest features.
