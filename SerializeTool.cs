@@ -162,6 +162,34 @@ namespace EasyXMLSerializer
         }
 
         /// <summary>
+        /// Serialize the given Object to String
+        /// </summary>
+        /// <param name="objectToWrite">Object to write</param>
+        /// <param name="returnString">Output String</param>
+        /// <typeparam name="T">type of object to serialize</typeparam>
+        /// <returns>True/False</returns>
+        public bool WriteXmlToString<T>(T objectToWrite, out string returnString)
+        {
+            using (var memStream = new MemoryStream())
+            { 
+                if (WriteXmlToStream(objectToWrite, memStream))
+                {
+                    //memStream.Position = 0;
+                    using (var streamReader = new StreamReader(memStream))
+                    {
+                        returnString = streamReader.ReadToEnd();
+                        return true;
+                    }
+                }
+
+                returnString = null;
+                return false;
+
+
+            }
+        }
+
+        /// <summary>
         /// Serialize a Object to XML by using the Stream.
         /// </summary>
         /// <typeparam name="T">Type of the given Object</typeparam>

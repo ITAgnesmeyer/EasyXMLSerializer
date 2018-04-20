@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EasyXMLSerializer</name>
+    </assembly>
+    <members>
+        <member name="T:EasyXMLSerializer.LogEventArgs">
+            <summary>
+            EventArgs for LogMessages
+            </summary>
+        </member>
+        <member name="M:EasyXMLSerializer.LogEventArgs.#ctor(System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="message">Message</param>
+        </member>
+        <member name="P:EasyXMLSerializer.LogEventArgs.Message">
+            <summary>
+            Message
+            </summary>
+        </member>
+        <member name="T:EasyXMLSerializer.SerializeTool">
+            <summary>
+            SerializeTool
+            </summary>
+        </member>
+        <member name="E:EasyXMLSerializer.SerializeTool.LogEvent">
+            <summary>
+            Event fired on Exceptions
+            </summary>
+        </member>
+        <member name="M:EasyXMLSerializer.SerializeTool.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:EasyXMLSerializer.SerializeTool.#ctor(System.String)">
+            <summary>
+            Constructor 
+            </summary>
+            <param name="fileName">Path to the File for Serialization</param>
+        </member>
+        <member name="M:EasyXMLSerializer.SerializeTool.MappEvents(System.Xml.Serialization.XmlSerializer)">
+            <summary>
+            Maps the Events of XmlSerilizer.
+            </summary>
+            <param name="serializer">XmlSerializer Object</param>
+        </member>
+        <member name="M:EasyXMLSerializer.SerializeTool.DisposeXmlSerializer(System.Xml.Serialization.XmlSerializer)">
+            <summary>
+            Unmaps the Events from the XmlSerilizer Object
+            </summary>
+            <param name="serializer"></param>
+        </member>
+        <member name="M:EasyXMLSerializer.SerializeTool.NewXmlSerializer(System.Type)">
+            <summary>
+            Creates a new XmlSerilizer
+            </summary>
+            <param name="objectType">Type of the Object to be serialized</param>
+            <returns>Returns a new Instance of XmlSerilizer</returns>
+        </member>
+        <member name="M:EasyXMLSerializer.SerializeTool.ReadXmlFromString``1(System.String)">
+            <summary>
+            Creates a Object with the given type from a XML-String
+            </summary>
+            <typeparam name="T">Type of the returning Object</typeparam>
+            <param name="xmlString">XML-String to be serialized</param>
+            <returns>De-serialized object of the given Type</returns>
+        </member>
+        <member name="M:EasyXMLSerializer.SerializeTool.ReadXmlFromStream``1(System.IO.Stream)">
+            <summary>
+            De-serialize a Object with given Type from a Stream-object
+            </summary>
+            <typeparam name="T">Type of the returning Object</typeparam>
+            <param name="stream">Stream - Object containing the XML-Data</param>
+            <returns>De-serialized object of the given Type</returns>
+        </member>
+        <member name="M:EasyXMLSerializer.SerializeTool.WriteXmlToStream``1(``0,System.IO.Stream)">
+            <summary>
+            Serialize a Object to XML by using the Stream.
+            </summary>
+            <typeparam name="T">Type of the given Object</typeparam>
+            <param name="objectToWrite">Object to be serialized</param>
+            <param name="stream">Stream - object for Serializing</param>
+            <returns>Returns True if the Serializing was OK. Returns false if the Serializing fails</returns>
+        </member>
+        <member name="M:EasyXMLSerializer.SerializeTool.ReadXmlFile``1(System.String)">
+            <summary>
+            De-serialize a given XML-Fiel to a given Type
+            </summary>
+            <typeparam name="T">Type of the returning Object</typeparam>
+            <param name="configurationFile">Input File containing the XML-String</param>
+            <returns>De-serialized object of the given Type</returns>
+        </member>
+        <member name="M:EasyXMLSerializer.SerializeTool.WriteXmlFile``1(``0,System.String)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="objectToWrite"></param>
+            <param name="configurationFile"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyXMLSerializer.SerializeTool.ReadXmlFile``1">
+            <summary>
+            Read the given XML-Fiel to an object
+            </summary>
+            <typeparam name="T">Type of the returning Object</typeparam>
+            <returns>De-serialized Object</returns>
+        </member>
+        <member name="M:EasyXMLSerializer.SerializeTool.WriteXmlFile``1(``0)">
+            <summary>
+            Write a given Object to the given XML-File
+            </summary>
+            <typeparam name="T">Type of the Object to be serialized</typeparam>
+            <param name="objectToWrite">Object to be written</param>
+            <returns>Return True on Success. Returns false on fail</returns>
+        </member>
+        <member name="M:EasyXMLSerializer.SerializeTool.GetLogText">
+            <summary>
+            Function returns the LogMessages
+            </summary>
+            <returns>LogMessages</returns>
+        </member>
+        <member name="P:EasyXMLSerializer.SerializeTool.LastError">
+            <summary>
+            Last Error
+            </summary>
+        </member>
+        <member name="P:EasyXMLSerializer.SerializeTool.ConfigurationFileName">
+            <summary>
+            Configuration - File
+            </summary>
+        </member>
+        <member name="M:EasyXMLSerializer.SerializeTool.OnLogEvent(System.String)">
+            <summary>
+            Raise the LogEvent
+            </summary>
+            <param name="message">Message to be send to The Event</param>
+        </member>
+    </members>
+</doc>
