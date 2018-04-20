@@ -186,6 +186,8 @@ namespace EasyXMLSerializer
                     serializer.Serialize(writer, objectToWrite);
                 }
 
+                //set Stream to the top position
+                stream.Position = 0;
 
                 return true;
             }
