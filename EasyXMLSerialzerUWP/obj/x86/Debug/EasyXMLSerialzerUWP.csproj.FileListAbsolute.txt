@@ -1,0 +1,17 @@
+D:\Develope\DIGA\EasyXMLSerializerTest\EasyXMLSerialzerUWP\bin\x86\Debug\EasyXMLSerialzerUWP.dll
+D:\Develope\DIGA\EasyXMLSerializerTest\EasyXMLSerialzerUWP\bin\x86\Debug\EasyXMLSerialzerUWP.pdb
+D:\Develope\DIGA\EasyXMLSerializerTest\EasyXMLSerialzerUWP\bin\x86\Debug\EasyXMLSerialzerUWP.pri
+D:\Develope\DIGA\EasyXMLSerializerTest\EasyXMLSerialzerUWP\obj\x86\Debug\EasyXMLSerialzerUWP.csproj.CoreCompileInputs.cache
+D:\Develope\DIGA\EasyXMLSerializerTest\EasyXMLSerialzerUWP\obj\x86\Debug\EasyXMLSerialzerUWP.dll
+D:\Develope\DIGA\EasyXMLSerializerTest\EasyXMLSerialzerUWP\obj\x86\Debug\EasyXMLSerialzerUWP.pdb
+D:\Develope\DIGA\EasyXMLSerializerTest\EasyXMLSerialzerUWP\obj\x86\Debug\priconfig.xml
+D:\Develope\DIGA\EasyXMLSerializerTest\EasyXMLSerialzerUWP\obj\x86\Debug\priconfig.xml.intermediate
+D:\Develope\DIGA\EasyXMLSerializerTest\EasyXMLSerialzerUWP\obj\x86\Debug\layout.resfiles
+D:\Develope\DIGA\EasyXMLSerializerTest\EasyXMLSerialzerUWP\obj\x86\Debug\layout.resfiles.intermediate
+D:\Develope\DIGA\EasyXMLSerializerTest\EasyXMLSerialzerUWP\obj\x86\Debug\resources.resfiles
+D:\Develope\DIGA\EasyXMLSerializerTest\EasyXMLSerialzerUWP\obj\x86\Debug\resources.resfiles.intermediate
+D:\Develope\DIGA\EasyXMLSerializerTest\EasyXMLSerialzerUWP\obj\x86\Debug\pri.resfiles
+D:\Develope\DIGA\EasyXMLSerializerTest\EasyXMLSerialzerUWP\obj\x86\Debug\pri.resfiles.intermediate
+D:\Develope\DIGA\EasyXMLSerializerTest\EasyXMLSerialzerUWP\obj\x86\Debug\qualifiers.txt
+D:\Develope\DIGA\EasyXMLSerializerTest\EasyXMLSerialzerUWP\obj\x86\Debug\qualifiers.txt.intermediate
+D:\Develope\DIGA\EasyXMLSerializerTest\EasyXMLSerialzerUWP\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
