@@ -1,7 +1,8 @@
 
 # EasyXMLSerializerUWP #
 
-UWP Version of EasyXMLSerializer
+UWP Version of EasyXMLSerializer.
+The UWP - Version got no Events.
 
 ## Usage: ##
 
