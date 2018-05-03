@@ -1,0 +1,6 @@
+E:\DIMOWO-GIT\EasyXMLSerializer\bin\Release\EasyXMLSerializer.dll
+E:\DIMOWO-GIT\EasyXMLSerializer\bin\Release\EasyXMLSerializer.pdb
+E:\DIMOWO-GIT\EasyXMLSerializer\obj\Release\EasyXMLSerializer.csprojResolveAssemblyReference.cache
+E:\DIMOWO-GIT\EasyXMLSerializer\obj\Release\EasyXMLSerializer.csproj.CoreCompileInputs.cache
+E:\DIMOWO-GIT\EasyXMLSerializer\obj\Release\EasyXMLSerializer.dll
+E:\DIMOWO-GIT\EasyXMLSerializer\obj\Release\EasyXMLSerializer.pdb

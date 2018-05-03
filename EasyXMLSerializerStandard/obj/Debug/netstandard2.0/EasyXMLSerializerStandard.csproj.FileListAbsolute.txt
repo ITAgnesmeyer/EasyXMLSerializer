@@ -1,0 +1,16 @@
+C:\Users\guido.local\source\repos\EasyXMLSerializerStandard\EasyXMLSerializerStandard\bin\Debug\netstandard2.0\EasyXMLSerializerStandard.deps.json
+C:\Users\guido.local\source\repos\EasyXMLSerializerStandard\EasyXMLSerializerStandard\bin\Debug\netstandard2.0\EasyXMLSerializerStandard.dll
+C:\Users\guido.local\source\repos\EasyXMLSerializerStandard\EasyXMLSerializerStandard\bin\Debug\netstandard2.0\EasyXMLSerializerStandard.pdb
+C:\Users\guido.local\source\repos\EasyXMLSerializerStandard\EasyXMLSerializerStandard\obj\Debug\netstandard2.0\EasyXMLSerializerStandard.csproj.CoreCompileInputs.cache
+C:\Users\guido.local\source\repos\EasyXMLSerializerStandard\EasyXMLSerializerStandard\obj\Debug\netstandard2.0\EasyXMLSerializerStandard.AssemblyInfoInputs.cache
+C:\Users\guido.local\source\repos\EasyXMLSerializerStandard\EasyXMLSerializerStandard\obj\Debug\netstandard2.0\EasyXMLSerializerStandard.AssemblyInfo.cs
+C:\Users\guido.local\source\repos\EasyXMLSerializerStandard\EasyXMLSerializerStandard\obj\Debug\netstandard2.0\EasyXMLSerializerStandard.dll
+C:\Users\guido.local\source\repos\EasyXMLSerializerStandard\EasyXMLSerializerStandard\obj\Debug\netstandard2.0\EasyXMLSerializerStandard.pdb
+E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerializerStandard\bin\Debug\netstandard2.0\EasyXMLSerializerStandard.deps.json
+E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerializerStandard\bin\Debug\netstandard2.0\EasyXMLSerializerStandard.dll
+E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerializerStandard\bin\Debug\netstandard2.0\EasyXMLSerializerStandard.pdb
+E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerializerStandard\obj\Debug\netstandard2.0\EasyXMLSerializerStandard.csproj.CoreCompileInputs.cache
+E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerializerStandard\obj\Debug\netstandard2.0\EasyXMLSerializerStandard.AssemblyInfoInputs.cache
+E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerializerStandard\obj\Debug\netstandard2.0\EasyXMLSerializerStandard.AssemblyInfo.cs
+E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerializerStandard\obj\Debug\netstandard2.0\EasyXMLSerializerStandard.dll
+E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerializerStandard\obj\Debug\netstandard2.0\EasyXMLSerializerStandard.pdb

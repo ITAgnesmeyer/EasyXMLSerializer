@@ -1,0 +1,17 @@
+E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\bin\x86\Release\EasyXMLSerialzerUWP.dll
+E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\bin\x86\Release\EasyXMLSerialzerUWP.pdb
+E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\bin\x86\Release\EasyXMLSerialzerUWP.pri
+E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\obj\x86\Release\EasyXMLSerialzerUWP.csproj.CoreCompileInputs.cache
+E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\obj\x86\Release\EasyXMLSerialzerUWP.dll
+E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\obj\x86\Release\EasyXMLSerialzerUWP.pdb
+E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\obj\x86\Release\priconfig.xml
+E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\obj\x86\Release\priconfig.xml.intermediate
+E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\obj\x86\Release\layout.resfiles
+E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\obj\x86\Release\layout.resfiles.intermediate
+E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\obj\x86\Release\resources.resfiles
+E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\obj\x86\Release\resources.resfiles.intermediate
+E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\obj\x86\Release\pri.resfiles
+E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\obj\x86\Release\pri.resfiles.intermediate
+E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\obj\x86\Release\qualifiers.txt
+E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\obj\x86\Release\qualifiers.txt.intermediate
+E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\obj\x86\Release\MultipleQualifiersPerDimensionFound.txt

@@ -76,6 +76,15 @@
             <param name="stream">Stream - Object containing the XML-Data</param>
             <returns>De-serialized object of the given Type</returns>
         </member>
+        <member name="M:EasyXMLSerializer.SerializeTool.WriteXmlToString``1(``0,System.String@)">
+            <summary>
+            Serialize the given Object to String
+            </summary>
+            <param name="objectToWrite">Object to write</param>
+            <param name="returnString">Output String</param>
+            <typeparam name="T">type of object to serialize</typeparam>
+            <returns>True/False</returns>
+        </member>
         <member name="M:EasyXMLSerializer.SerializeTool.WriteXmlToStream``1(``0,System.IO.Stream)">
             <summary>
             Serialize a Object to XML by using the Stream.

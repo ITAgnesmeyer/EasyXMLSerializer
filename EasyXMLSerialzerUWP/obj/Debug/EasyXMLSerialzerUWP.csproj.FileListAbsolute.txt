@@ -1,7 +1,6 @@
 E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\bin\Debug\EasyXMLSerialzerUWP.dll
 E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\bin\Debug\EasyXMLSerialzerUWP.pdb
 E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\bin\Debug\EasyXMLSerialzerUWP.pri
-E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\obj\Debug\EasyXMLSerialzerUWP.csprojResolveAssemblyReference.cache
 E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\obj\Debug\EasyXMLSerialzerUWP.csproj.CoreCompileInputs.cache
 E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\obj\Debug\EasyXMLSerialzerUWP.dll
 E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\obj\Debug\EasyXMLSerialzerUWP.pdb
