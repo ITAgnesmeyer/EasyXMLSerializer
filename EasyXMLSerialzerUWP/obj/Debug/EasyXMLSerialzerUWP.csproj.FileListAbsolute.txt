@@ -6,8 +6,6 @@ E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\obj\Debug\EasyXMLSerialzerUW
 E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\obj\Debug\EasyXMLSerialzerUWP.pdb
 E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\obj\Debug\priconfig.xml
 E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\obj\Debug\priconfig.xml.intermediate
-E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\obj\Debug\layout.resfiles
-E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\obj\Debug\layout.resfiles.intermediate
 E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\obj\Debug\resources.resfiles
 E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\obj\Debug\resources.resfiles.intermediate
 E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\obj\Debug\pri.resfiles
@@ -15,3 +13,10 @@ E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\obj\Debug\pri.resfiles.inter
 E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\obj\Debug\qualifiers.txt
 E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\obj\Debug\qualifiers.txt.intermediate
 E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\obj\Debug\MultipleQualifiersPerDimensionFound.txt
+E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\obj\Debug\EasyXMLSerialzerUWP.csprojAssemblyReference.cache
+E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\obj\Debug\unfiltered.layout.resfiles
+E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\obj\Debug\unfiltered.layout.resfiles.intermediate
+E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\obj\Debug\filtered.layout.resfiles
+E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\obj\Debug\filtered.layout.resfiles.intermediate
+E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\obj\Debug\excluded.layout.resfiles
+E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\obj\Debug\excluded.layout.resfiles.intermediate

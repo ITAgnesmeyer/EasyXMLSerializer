@@ -77,7 +77,7 @@ namespace EasyXMLSerializer
 
         private void OnUnreferencedObject(object sender, UnreferencedObjectEventArgs e)
         {
-            var value = $"UnreferecedObject:{e.UnreferencedObject.ToString()} ID:{e.UnreferencedId}";
+            var value = $"UnreferecedObject:{e.UnreferencedObject} ID:{e.UnreferencedId}";
             this._LogStringBuilder.AppendLine(value);
         }
 

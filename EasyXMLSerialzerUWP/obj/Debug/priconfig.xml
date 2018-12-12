@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <resources targetOsVersion="10.0.0" majorVersion="1">
-  <index root="\" startIndexAt="obj\Debug\layout.resfiles">
+  <index root="\" startIndexAt="obj\Debug\filtered.layout.resfiles">
     <default>
       <qualifier name="Language" value="de-DE" />
       <qualifier name="Contrast" value="standard" />
@@ -48,7 +48,7 @@
     <indexer-config type="PRI" />
     <indexer-config type="RESFILES" qualifierDelimiter="." />
   </index>
-  <index root="obj\Debug" startIndexAt="embed.resfiles">
+  <index root="obj\Debug\embed" startIndexAt="embed.resfiles">
     <default>
       <qualifier name="Language" value="de-DE" />
       <qualifier name="Contrast" value="standard" />
