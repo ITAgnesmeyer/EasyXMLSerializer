@@ -14,11 +14,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EasyXMLSerializerStandard")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("Easy to use Serializer")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.7.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.7")]
+[assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.7.1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.7.1")]
 [assembly: System.Reflection.AssemblyProductAttribute("EasyXMLSerializerStandard")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EasyXMLSerializerStandard")]
-[assembly: System.Reflection.AssemblyVersionAttribute("1.0.7.0")]
+[assembly: System.Reflection.AssemblyVersionAttribute("1.0.7.1")]
 
 // Von der MSBuild WriteCodeFragment-Klasse generiert.
 

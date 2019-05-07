@@ -41,7 +41,7 @@ namespace EasyXMLSerializerUWP
         /// <param name="serializer">XmlSerializer Object</param>
         // ReSharper disable once MemberCanBeMadeStatic.Local
         // ReSharper disable once UnusedParameter.Local
-        private void MappEvents(XmlSerializer serializer)
+        private void MapEvents(XmlSerializer serializer)
         {
             // UWP got no Events
             //if (serializer == null) return;
@@ -71,7 +71,7 @@ namespace EasyXMLSerializerUWP
         {   
             this._LogStringBuilder.Clear();
             XmlSerializer returnSerializer = new XmlSerializer(objectType);
-            MappEvents(returnSerializer);
+            MapEvents(returnSerializer);
             return returnSerializer;
         }
 
@@ -176,14 +176,27 @@ namespace EasyXMLSerializerUWP
         /// <returns>Returns True if the Serializing was OK. Returns false if the Serializing fails</returns>
         public bool WriteXmlToStream<T>(T objectToWrite, Stream stream)
         {
-           
+            XmlWriterSettings xmlSettings = SetXmlWriterSettings();
             XmlSerializer serializer = null;
             try
             {
                 serializer = NewXmlSerializer(typeof(T));
 
-                
-                serializer.Serialize(stream, objectToWrite);
+                using (XmlWriter writer = XmlWriter.Create(stream, xmlSettings))
+                {
+                    if (this.EmptyNamespaces)
+                    {
+                        var xmlns = new XmlSerializerNamespaces();
+                        xmlns.Add(string.Empty, string.Empty);
+                        serializer.Serialize(writer, objectToWrite, xmlns);
+                    }
+                    else
+                    {
+                        serializer.Serialize(writer, objectToWrite);
+                    }
+                    
+                }
+            
                 
 
                 //set Stream to the top position
@@ -370,7 +383,16 @@ namespace EasyXMLSerializerUWP
 
                 using (XmlWriter writer = XmlWriter.Create(File.OpenWrite(this.ConfigurationFileName), xmlSettings))
                 {
-                    serializer.Serialize(writer, objectToWrite);
+                    if (this.EmptyNamespaces)
+                    {
+                        var xmlns = new XmlSerializerNamespaces();
+                        xmlns.Add(string.Empty, string.Empty);
+                        serializer.Serialize(writer, objectToWrite, xmlns);
+                    }
+                    else
+                    {
+                        serializer.Serialize(writer, objectToWrite);
+                    }
                     
                 }
               
@@ -408,6 +430,7 @@ namespace EasyXMLSerializerUWP
         /// </summary>
         public string ConfigurationFileName { get; set; }
 
+        public bool EmptyNamespaces{get;set;}
         /// <summary>
         /// Raise the LogEvent
         /// </summary>

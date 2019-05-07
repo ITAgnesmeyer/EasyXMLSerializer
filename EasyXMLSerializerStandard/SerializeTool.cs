@@ -206,7 +206,16 @@ namespace EasyXMLSerializerStandard
 
                 using (XmlWriter writer = XmlWriter.Create(stream, xmlSettings))
                 {
-                    serializer.Serialize(writer, objectToWrite);
+                    if (this.EmptyNamespaces)
+                    {
+                        var xmlns = new XmlSerializerNamespaces();
+                        xmlns.Add(string.Empty, string.Empty);
+                        serializer.Serialize(writer, objectToWrite, xmlns);
+                    }
+                    else
+                    {
+                        serializer.Serialize(writer, objectToWrite);
+                    }
                 }
 
                 //set Stream to the top position
@@ -256,7 +265,7 @@ namespace EasyXMLSerializerStandard
         /// </summary>
         /// <typeparam name="T">Type of the returning Object</typeparam>
         /// <returns>De-serialized Object</returns>
-        public T ReadXmlFile<T>()
+        public T ReadXmlFile<T>() 
         {
             T returnObject = default(T);
             XmlSerializer serializer = null;
@@ -310,7 +319,17 @@ namespace EasyXMLSerializerStandard
 
                 using (XmlWriter writer = XmlWriter.Create(this.ConfigurationFileName, xmlSettings))
                 {
-                    serializer.Serialize(writer, objectToWrite);
+
+                    if (this.EmptyNamespaces)
+                    {
+                        var xmlns = new XmlSerializerNamespaces();
+                        xmlns.Add(string.Empty, string.Empty);
+                        serializer.Serialize(writer, objectToWrite, xmlns);
+                    }
+                    else
+                    {
+                        serializer.Serialize(writer, objectToWrite);
+                    }
                 }
 
                 return true;
@@ -346,6 +365,8 @@ namespace EasyXMLSerializerStandard
         /// Configuration - File
         /// </summary>
         public string ConfigurationFileName { get; set; }
+
+        public bool EmptyNamespaces{get;set;}
 
         /// <summary>
         /// Raise the LogEvent

@@ -220,7 +220,16 @@ namespace EasyXMLSerializer
 
                 using (XmlWriter writer = XmlWriter.Create(stream, xmlSettings))
                 {
-                    serializer.Serialize(writer, objectToWrite);
+                    if (this.EmptyNamespaces)
+                    {
+                        var xmlns = new XmlSerializerNamespaces();
+                        xmlns.Add(string.Empty, string.Empty);
+                        serializer.Serialize(writer, objectToWrite, xmlns);
+                    }
+                    else
+                    {
+                        serializer.Serialize(writer, objectToWrite);
+                    }
                 }
 
                 //set Stream to the top position
@@ -314,7 +323,16 @@ namespace EasyXMLSerializer
 
                 using (XmlWriter writer = XmlWriter.Create(this.ConfigurationFileName, xmlSettings))
                 {
-                    serializer.Serialize(writer, objectToWrite);
+                    if (this.EmptyNamespaces)
+                    {
+                        var xmlns = new XmlSerializerNamespaces();
+                        xmlns.Add(string.Empty, string.Empty);
+                        serializer.Serialize(writer, objectToWrite, xmlns);
+                    }
+                    else
+                    {
+                        serializer.Serialize(writer, objectToWrite);
+                    }
                 }
 
                 return true;
@@ -350,6 +368,11 @@ namespace EasyXMLSerializer
         /// Configuration - File
         /// </summary>
         public string ConfigurationFileName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool EmptyNamespaces{get;set;}
 
         /// <summary>
         /// Raise the LogEvent

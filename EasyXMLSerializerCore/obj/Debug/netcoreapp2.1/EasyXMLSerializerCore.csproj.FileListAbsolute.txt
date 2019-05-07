@@ -6,4 +6,3 @@ E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerializerCore\obj\Debug\netcoreapp2.1\Ea
 E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerializerCore\obj\Debug\netcoreapp2.1\EasyXMLSerializerCore.AssemblyInfo.cs
 E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerializerCore\obj\Debug\netcoreapp2.1\EasyXMLSerializerCore.dll
 E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerializerCore\obj\Debug\netcoreapp2.1\EasyXMLSerializerCore.pdb
-E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerializerCore\obj\Debug\netcoreapp2.1\EasyXMLSerializerCore.csprojAssemblyReference.cache

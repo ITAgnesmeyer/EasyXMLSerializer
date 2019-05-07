@@ -148,6 +148,11 @@
             Configuration - File
             </summary>
         </member>
+        <member name="P:EasyXMLSerializer.SerializeTool.EmptyNamespaces">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="M:EasyXMLSerializer.SerializeTool.OnLogEvent(System.String)">
             <summary>
             Raise the LogEvent
