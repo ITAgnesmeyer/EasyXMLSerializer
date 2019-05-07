@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace EasyXMLSerialzerUWP
+namespace EasyXMLSerializerUWP
 {
     /// <summary>
     /// EventArgs for LogMessages

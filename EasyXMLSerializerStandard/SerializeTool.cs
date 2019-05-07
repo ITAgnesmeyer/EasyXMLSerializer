@@ -39,7 +39,7 @@ namespace EasyXMLSerializerStandard
         /// Maps the Events of XmlSerilizer.
         /// </summary>
         /// <param name="serializer">XmlSerializer Object</param>
-        private void MappEvents(XmlSerializer serializer)
+        private void MapEvents(XmlSerializer serializer)
         {
             if (serializer == null) return;
             serializer.UnknownAttribute += OnUnknownAttribute;
@@ -71,7 +71,7 @@ namespace EasyXMLSerializerStandard
         {
             this._LogStringBuilder.Clear();
             XmlSerializer returnSerializer = new XmlSerializer(objectType);
-            MappEvents(returnSerializer);
+            MapEvents(returnSerializer);
             return returnSerializer;
         }
 
@@ -198,12 +198,7 @@ namespace EasyXMLSerializerStandard
         /// <returns>Returns True if the Serializing was OK. Returns false if the Serializing fails</returns>
         public bool WriteXmlToStream<T>(T objectToWrite, Stream stream)
         {
-            XmlWriterSettings xmlSettings = new XmlWriterSettings
-            {
-                Indent = true,
-                OmitXmlDeclaration = true,
-                Encoding = Encoding.UTF8
-            };
+            XmlWriterSettings xmlSettings = SetXmlWriterSettings();
             XmlSerializer serializer = null;
             try
             {
@@ -287,6 +282,16 @@ namespace EasyXMLSerializerStandard
             return returnObject;
         }
 
+        protected virtual XmlWriterSettings SetXmlWriterSettings()
+        {
+            return new XmlWriterSettings
+            {
+                Indent = true,
+                OmitXmlDeclaration = false,
+                Encoding = Encoding.UTF8
+            };
+        }
+
         /// <summary>
         /// Write a given Object to the given XML-File
         /// </summary>
@@ -295,12 +300,7 @@ namespace EasyXMLSerializerStandard
         /// <returns>Return True on Success. Returns false on fail</returns>
         public bool WriteXmlFile<T>(T objectToWrite)
         {
-            XmlWriterSettings xmlSettings = new XmlWriterSettings
-            {
-                Indent = true,
-                OmitXmlDeclaration = false,
-                Encoding = Encoding.UTF8
-            };
+            XmlWriterSettings xmlSettings = SetXmlWriterSettings();
 
             XmlSerializer serializer = null;
 

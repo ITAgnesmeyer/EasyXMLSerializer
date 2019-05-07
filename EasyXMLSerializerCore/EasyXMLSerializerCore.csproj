@@ -1,11 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <Description>Easy to use Serializer</Description>
     <Authors>Guido Agnesmeyer</Authors>
     <Company>Dipl.-Ing.(FH)Guido Agnesmeyer</Company>
+    <Version>1.0.7</Version>
   </PropertyGroup>
 
 </Project>

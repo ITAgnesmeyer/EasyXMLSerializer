@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.1": {
-      "EasyXMLSerializerCore/1.0.0": {
+      "EasyXMLSerializerCore/1.0.7": {
         "runtime": {
           "EasyXMLSerializerCore.dll": {}
         }
@@ -14,7 +14,7 @@
     }
   },
   "libraries": {
-    "EasyXMLSerializerCore/1.0.0": {
+    "EasyXMLSerializerCore/1.0.7": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

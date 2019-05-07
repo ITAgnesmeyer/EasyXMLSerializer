@@ -7,8 +7,7 @@ using System.Xml.Serialization;
 using Windows.Storage;
 using Windows.Storage.Streams;
 
-
-namespace EasyXMLSerialzerUWP
+namespace EasyXMLSerializerUWP
 {
     public class SerializeTool
     {
@@ -344,7 +343,15 @@ namespace EasyXMLSerialzerUWP
                 
             }
         }
-
+        protected virtual XmlWriterSettings SetXmlWriterSettings()
+        {
+            return new XmlWriterSettings
+            {
+                Indent = true,
+                OmitXmlDeclaration = true,
+                Encoding = Encoding.UTF8
+            };
+        }
         /// <summary>
         /// Write a given Object to the given XML-File
         /// </summary>
@@ -353,12 +360,7 @@ namespace EasyXMLSerialzerUWP
         /// <returns>Return True on Success. Returns false on fail</returns>
         public bool WriteXmlFile<T>(T objectToWrite)
         {
-            XmlWriterSettings xmlSettings = new XmlWriterSettings
-            {
-                Indent = true,
-                OmitXmlDeclaration = false,
-                Encoding = Encoding.UTF8
-            };
+            XmlWriterSettings xmlSettings = SetXmlWriterSettings();
 
             XmlSerializer serializer = null;
 

@@ -1,9 +1,4 @@
-E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\bin\Debug\EasyXMLSerialzerUWP.dll
-E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\bin\Debug\EasyXMLSerialzerUWP.pdb
-E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\bin\Debug\EasyXMLSerialzerUWP.pri
 E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\obj\Debug\EasyXMLSerialzerUWP.csproj.CoreCompileInputs.cache
-E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\obj\Debug\EasyXMLSerialzerUWP.dll
-E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\obj\Debug\EasyXMLSerialzerUWP.pdb
 E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\obj\Debug\priconfig.xml
 E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\obj\Debug\priconfig.xml.intermediate
 E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\obj\Debug\resources.resfiles
@@ -13,10 +8,14 @@ E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\obj\Debug\pri.resfiles.inter
 E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\obj\Debug\qualifiers.txt
 E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\obj\Debug\qualifiers.txt.intermediate
 E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\obj\Debug\MultipleQualifiersPerDimensionFound.txt
-E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\obj\Debug\EasyXMLSerialzerUWP.csprojAssemblyReference.cache
 E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\obj\Debug\unfiltered.layout.resfiles
 E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\obj\Debug\unfiltered.layout.resfiles.intermediate
 E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\obj\Debug\filtered.layout.resfiles
 E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\obj\Debug\filtered.layout.resfiles.intermediate
 E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\obj\Debug\excluded.layout.resfiles
 E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\obj\Debug\excluded.layout.resfiles.intermediate
+E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\bin\Debug\EasyXMLSerializerUWP.dll
+E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\bin\Debug\EasyXMLSerializerUWP.pdb
+E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\bin\Debug\EasyXMLSerializerUWP.pri
+E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\obj\Debug\EasyXMLSerializerUWP.dll
+E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerialzerUWP\obj\Debug\EasyXMLSerializerUWP.pdb

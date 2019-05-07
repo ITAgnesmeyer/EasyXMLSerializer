@@ -7,8 +7,8 @@
     <ProjectGuid>{E9E0F91C-0E7C-412C-A61D-B5775BB180DC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EasyXMLSerialzerUWP</RootNamespace>
-    <AssemblyName>EasyXMLSerialzerUWP</AssemblyName>
+    <RootNamespace>EasyXMLSerializerUWP</RootNamespace>
+    <AssemblyName>EasyXMLSerializerUWP</AssemblyName>
     <DefaultLanguage>de-DE</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.17763.0</TargetPlatformVersion>

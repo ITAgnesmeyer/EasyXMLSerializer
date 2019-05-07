@@ -41,7 +41,7 @@
             </summary>
             <param name="fileName">Path to the File for Serialization</param>
         </member>
-        <member name="M:EasyXMLSerializer.SerializeTool.MappEvents(System.Xml.Serialization.XmlSerializer)">
+        <member name="M:EasyXMLSerializer.SerializeTool.MapEvents(System.Xml.Serialization.XmlSerializer)">
             <summary>
             Maps the Events of XmlSerilizer.
             </summary>
@@ -84,6 +84,12 @@
             <param name="returnString">Output String</param>
             <typeparam name="T">type of object to serialize</typeparam>
             <returns>True/False</returns>
+        </member>
+        <member name="M:EasyXMLSerializer.SerializeTool.SetXmlWriterSettings">
+            <summary>
+            
+            </summary>
+            <returns></returns>
         </member>
         <member name="M:EasyXMLSerializer.SerializeTool.WriteXmlToStream``1(``0,System.IO.Stream)">
             <summary>

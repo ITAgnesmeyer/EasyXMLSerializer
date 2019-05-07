@@ -14,4 +14,3 @@ E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerializerStandard\obj\Debug\netstandard2
 E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerializerStandard\obj\Debug\netstandard2.0\EasyXMLSerializerStandard.AssemblyInfo.cs
 E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerializerStandard\obj\Debug\netstandard2.0\EasyXMLSerializerStandard.dll
 E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerializerStandard\obj\Debug\netstandard2.0\EasyXMLSerializerStandard.pdb
-E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerializerStandard\obj\Debug\netstandard2.0\EasyXMLSerializerStandard.csprojAssemblyReference.cache

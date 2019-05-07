@@ -39,7 +39,7 @@ namespace EasyXMLSerializer
         /// Maps the Events of XmlSerilizer.
         /// </summary>
         /// <param name="serializer">XmlSerializer Object</param>
-        private void MappEvents(XmlSerializer serializer)
+        private void MapEvents(XmlSerializer serializer)
         {
             if (serializer == null) return;
             serializer.UnknownAttribute += OnUnknownAttribute;
@@ -71,7 +71,7 @@ namespace EasyXMLSerializer
         {
             this._LogStringBuilder.Clear();
             XmlSerializer returnSerializer = new XmlSerializer(objectType);
-            MappEvents(returnSerializer);
+            MapEvents(returnSerializer);
             return returnSerializer;
         }
 
@@ -190,6 +190,20 @@ namespace EasyXMLSerializer
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        protected virtual XmlWriterSettings SetXmlWriterSettings()
+        {
+            return new XmlWriterSettings
+            {
+                Indent = true,
+                OmitXmlDeclaration = true,
+                Encoding = Encoding.UTF8
+            };
+        }
+
+        /// <summary>
         /// Serialize a Object to XML by using the Stream.
         /// </summary>
         /// <typeparam name="T">Type of the given Object</typeparam>
@@ -198,12 +212,7 @@ namespace EasyXMLSerializer
         /// <returns>Returns True if the Serializing was OK. Returns false if the Serializing fails</returns>
         public bool WriteXmlToStream<T>(T objectToWrite, Stream stream)
         {
-            XmlWriterSettings xmlSettings = new XmlWriterSettings
-            {
-                Indent = true,
-                OmitXmlDeclaration = true,
-                Encoding = Encoding.UTF8
-            };
+            XmlWriterSettings xmlSettings = SetXmlWriterSettings();
             XmlSerializer serializer = null;
             try
             {
@@ -295,12 +304,7 @@ namespace EasyXMLSerializer
         /// <returns>Return True on Success. Returns false on fail</returns>
         public bool WriteXmlFile<T>(T objectToWrite)
         {
-            XmlWriterSettings xmlSettings = new XmlWriterSettings
-            {
-                Indent = true,
-                OmitXmlDeclaration = false,
-                Encoding = Encoding.UTF8
-            };
+            XmlWriterSettings xmlSettings = SetXmlWriterSettings();
 
             XmlSerializer serializer = null;
 
