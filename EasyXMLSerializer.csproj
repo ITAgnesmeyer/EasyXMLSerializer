@@ -50,10 +50,15 @@
     <Compile Include="LogEventArgs.cs" />
     <Compile Include="SerializeTool.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Validation\DtdMessageType.cs" />
+    <Compile Include="Validation\ValidationErrorInfo.cs" />
+    <Compile Include="Validation\XmlDTDValidation.cs" />
+    <Compile Include="Validation\XmlFileResolver.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="EasyXMLSerializer.snk" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

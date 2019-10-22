@@ -3,7 +3,7 @@ using System.IO;
 using System.Text;
 using System.Xml;
 using System.Xml.Serialization;
-
+using EasyXMLSerializer.Validation;
 namespace EasyXMLSerializer
 {
     /// <summary>
@@ -381,6 +381,29 @@ namespace EasyXMLSerializer
         protected virtual void OnLogEvent(string message)
         {
             LogEvent?.Invoke(this, new LogEventArgs(message));
+        }
+
+        /// <summary>
+        /// Gets a DtdValidator.
+        /// You can Validate your XML-File with the DTD - Information form your Header.
+        /// This function takes the given XML-File
+        /// </summary>
+        /// <returns>XmlDtdValidator</returns>
+        public Validation.XmlDtdValidator GetDtdValidator()
+        {
+            return new Validation.XmlDtdValidator(this.ConfigurationFileName);
+        }
+
+        /// <summary>
+        /// Gets a DtdValidator.
+        /// You can Validate your XML-File with the DTD - Information form your Header.
+        /// This function takes the full-path of an xml-File
+        /// </summary>
+        /// <param name="file">Full - Path to XML-File</param>
+        /// <returns>XmlDtdValidator</returns>
+        public XmlDtdValidator GetDtdValidator(string file)
+        {
+            return new XmlDtdValidator(file);
         }
     }
 }

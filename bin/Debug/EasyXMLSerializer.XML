@@ -159,5 +159,118 @@
             </summary>
             <param name="message">Message to be send to The Event</param>
         </member>
+        <member name="M:EasyXMLSerializer.SerializeTool.GetDtdValidator">
+            <summary>
+            Gets a DtdValidator.
+            You can Validate your XML-File with the DTD - Information form your Header.
+            This function takes the given XML-File
+            </summary>
+            <returns>XmlDtdValidator</returns>
+        </member>
+        <member name="M:EasyXMLSerializer.SerializeTool.GetDtdValidator(System.String)">
+            <summary>
+            Gets a DtdValidator.
+            You can Validate your XML-File with the DTD - Information form your Header.
+            This function takes the full-path of an xml-File
+            </summary>
+            <param name="file">Full - Path to XML-File</param>
+            <returns>XmlDtdValidator</returns>
+        </member>
+        <member name="T:EasyXMLSerializer.Validation.DtdMessageType">
+            <summary>
+            Enum shows which Message was given
+            </summary>
+        </member>
+        <member name="F:EasyXMLSerializer.Validation.DtdMessageType.Error">
+            <summary>
+            Error
+            </summary>
+        </member>
+        <member name="F:EasyXMLSerializer.Validation.DtdMessageType.Warning">
+            <summary>
+            Warning
+            </summary>
+        </member>
+        <member name="T:EasyXMLSerializer.Validation.ValidationErrorInfo">
+            <summary>
+            ValidationError-Info
+            </summary>
+        </member>
+        <member name="M:EasyXMLSerializer.Validation.ValidationErrorInfo.#ctor(System.String,System.Int32,System.Int32,System.Exception,EasyXMLSerializer.Validation.DtdMessageType)">
+            <summary>
+            CTOR
+            </summary>
+            <param name="message">Message</param>
+            <param name="lineNumber">Line Number</param>
+            <param name="linePosition">Position in Line</param>
+            <param name="exception">Inner Exception</param>
+            <param name="messageType">Type of the Message (Error or Warning)</param>
+        </member>
+        <member name="M:EasyXMLSerializer.Validation.ValidationErrorInfo.#ctor(System.String,System.Xml.Schema.ValidationEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+            <param name="eventArg"></param>
+        </member>
+        <member name="P:EasyXMLSerializer.Validation.ValidationErrorInfo.Message">
+            <summary>
+            Message
+            </summary>
+        </member>
+        <member name="P:EasyXMLSerializer.Validation.ValidationErrorInfo.LineNumber">
+            <summary>
+            Line Number
+            </summary>
+        </member>
+        <member name="P:EasyXMLSerializer.Validation.ValidationErrorInfo.LinePosition">
+            <summary>
+            Positon in Line
+            </summary>
+        </member>
+        <member name="P:EasyXMLSerializer.Validation.ValidationErrorInfo.Exception">
+            <summary>
+            Inner Exception
+            </summary>
+        </member>
+        <member name="P:EasyXMLSerializer.Validation.ValidationErrorInfo.MessageType">
+            <summary>
+            DtdMessageType
+            </summary>
+        </member>
+        <member name="T:EasyXMLSerializer.Validation.XmlDtdValidator">
+            <summary>
+            Class to execute a DTD-Validation
+            </summary>
+        </member>
+        <member name="P:EasyXMLSerializer.Validation.XmlDtdValidator.Errors">
+            <summary>
+            The amount of Errors
+            </summary>
+        </member>
+        <member name="P:EasyXMLSerializer.Validation.XmlDtdValidator.Warnings">
+            <summary>
+            The amount of Warnings
+            </summary>
+        </member>
+        <member name="P:EasyXMLSerializer.Validation.XmlDtdValidator.LastExceptions">
+            <summary>
+            List of found Exceptions
+            </summary>
+        </member>
+        <member name="M:EasyXMLSerializer.Validation.XmlDtdValidator.#ctor(System.String)">
+            <summary>
+            Contructor für the class.
+            The file to Validate must be given!
+            </summary>
+            <param name="file">Existing XML-FILE</param>
+        </member>
+        <member name="M:EasyXMLSerializer.Validation.XmlDtdValidator.Validate">
+            <summary>
+            Validates the File
+            If there is a valid DTD-Header
+            </summary>
+            <returns>true/false</returns>
+        </member>
     </members>
 </doc>
