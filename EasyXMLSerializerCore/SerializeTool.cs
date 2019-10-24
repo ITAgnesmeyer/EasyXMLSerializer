@@ -3,6 +3,7 @@ using System.IO;
 using System.Text;
 using System.Xml;
 using System.Xml.Serialization;
+using EasyXMLSerializerCore.Validation;
 
 namespace EasyXMLSerializerCore
 {
@@ -190,6 +191,20 @@ namespace EasyXMLSerializerCore
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        protected virtual XmlWriterSettings SetXmlWriterSettings()
+        {
+            return new XmlWriterSettings
+            {
+                Indent = true,
+                OmitXmlDeclaration = true,
+                Encoding = Encoding.UTF8
+            };
+        }
+
+        /// <summary>
         /// Serialize a Object to XML by using the Stream.
         /// </summary>
         /// <typeparam name="T">Type of the given Object</typeparam>
@@ -216,7 +231,6 @@ namespace EasyXMLSerializerCore
                     {
                         serializer.Serialize(writer, objectToWrite);
                     }
-                    
                 }
 
                 //set Stream to the top position
@@ -234,16 +248,6 @@ namespace EasyXMLSerializerCore
             {
                 DisposeXmlSerializer(serializer);
             }
-        }
-
-        protected virtual XmlWriterSettings SetXmlWriterSettings()
-        {
-            return new XmlWriterSettings
-            {
-                Indent = true,
-                OmitXmlDeclaration = true,
-                Encoding = Encoding.UTF8
-            };
         }
 
         /// <summary>
@@ -330,7 +334,6 @@ namespace EasyXMLSerializerCore
                     {
                         serializer.Serialize(writer, objectToWrite);
                     }
-                    
                 }
 
                 return true;
@@ -367,6 +370,9 @@ namespace EasyXMLSerializerCore
         /// </summary>
         public string ConfigurationFileName { get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public bool EmptyNamespaces{get;set;}
 
         /// <summary>
@@ -376,6 +382,29 @@ namespace EasyXMLSerializerCore
         protected virtual void OnLogEvent(string message)
         {
             LogEvent?.Invoke(this, new LogEventArgs(message));
+        }
+
+        /// <summary>
+        /// Gets a DtdValidator.
+        /// You can Validate your XML-File with the DTD - Information form your Header.
+        /// This function takes the given XML-File
+        /// </summary>
+        /// <returns>XmlDtdValidator</returns>
+        public XmlDtdValidator GetDtdValidator()
+        {
+            return new XmlDtdValidator(this.ConfigurationFileName);
+        }
+
+        /// <summary>
+        /// Gets a DtdValidator.
+        /// You can Validate your XML-File with the DTD - Information form your Header.
+        /// This function takes the full-path of an xml-File
+        /// </summary>
+        /// <param name="file">Full - Path to XML-File</param>
+        /// <returns>XmlDtdValidator</returns>
+        public XmlDtdValidator GetDtdValidator(string file)
+        {
+            return new XmlDtdValidator(file);
         }
     }
 }

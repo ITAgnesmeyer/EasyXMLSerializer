@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27428.2043
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29411.138
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyXMLSerializer", "EasyXMLSerializer.csproj", "{607FC9A9-0CC8-4409-AFB1-32EA97152FAA}"
 EndProject
@@ -12,6 +12,10 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyXMLSerializerCore", "EasyXMLSerializerCore\EasyXMLSerializerCore.csproj", "{812CCC2D-FD64-4119-AD25-E6DC0A79EC49}"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "EasyXMLSerializerVB", "EasyXMLSerializerVB\EasyXMLSerializerVB.vbproj", "{F5B131B4-9214-4D9A-BC4F-6ED5C12E5211}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyXMLSerializer.Test", "..\EasyXMLSerializer.Test\EasyXMLSerializer.Test.csproj", "{5EABF3F6-4A5C-48DE-9C79-6ADCAB42FFEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyXMLSerializerCore.Test", "..\EasyXMLSerializerCore.Test\EasyXMLSerializerCore.Test.csproj", "{BCE72D9E-4F4D-4A85-8900-BE58576AFB7E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -105,6 +109,38 @@ Global
 		{F5B131B4-9214-4D9A-BC4F-6ED5C12E5211}.Release|x64.Build.0 = Release|Any CPU
 		{F5B131B4-9214-4D9A-BC4F-6ED5C12E5211}.Release|x86.ActiveCfg = Release|Any CPU
 		{F5B131B4-9214-4D9A-BC4F-6ED5C12E5211}.Release|x86.Build.0 = Release|Any CPU
+		{5EABF3F6-4A5C-48DE-9C79-6ADCAB42FFEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EABF3F6-4A5C-48DE-9C79-6ADCAB42FFEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EABF3F6-4A5C-48DE-9C79-6ADCAB42FFEB}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{5EABF3F6-4A5C-48DE-9C79-6ADCAB42FFEB}.Debug|ARM.Build.0 = Debug|Any CPU
+		{5EABF3F6-4A5C-48DE-9C79-6ADCAB42FFEB}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{5EABF3F6-4A5C-48DE-9C79-6ADCAB42FFEB}.Debug|x64.Build.0 = Debug|Any CPU
+		{5EABF3F6-4A5C-48DE-9C79-6ADCAB42FFEB}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5EABF3F6-4A5C-48DE-9C79-6ADCAB42FFEB}.Debug|x86.Build.0 = Debug|Any CPU
+		{5EABF3F6-4A5C-48DE-9C79-6ADCAB42FFEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EABF3F6-4A5C-48DE-9C79-6ADCAB42FFEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EABF3F6-4A5C-48DE-9C79-6ADCAB42FFEB}.Release|ARM.ActiveCfg = Release|Any CPU
+		{5EABF3F6-4A5C-48DE-9C79-6ADCAB42FFEB}.Release|ARM.Build.0 = Release|Any CPU
+		{5EABF3F6-4A5C-48DE-9C79-6ADCAB42FFEB}.Release|x64.ActiveCfg = Release|Any CPU
+		{5EABF3F6-4A5C-48DE-9C79-6ADCAB42FFEB}.Release|x64.Build.0 = Release|Any CPU
+		{5EABF3F6-4A5C-48DE-9C79-6ADCAB42FFEB}.Release|x86.ActiveCfg = Release|Any CPU
+		{5EABF3F6-4A5C-48DE-9C79-6ADCAB42FFEB}.Release|x86.Build.0 = Release|Any CPU
+		{BCE72D9E-4F4D-4A85-8900-BE58576AFB7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCE72D9E-4F4D-4A85-8900-BE58576AFB7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCE72D9E-4F4D-4A85-8900-BE58576AFB7E}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{BCE72D9E-4F4D-4A85-8900-BE58576AFB7E}.Debug|ARM.Build.0 = Debug|Any CPU
+		{BCE72D9E-4F4D-4A85-8900-BE58576AFB7E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{BCE72D9E-4F4D-4A85-8900-BE58576AFB7E}.Debug|x64.Build.0 = Debug|Any CPU
+		{BCE72D9E-4F4D-4A85-8900-BE58576AFB7E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BCE72D9E-4F4D-4A85-8900-BE58576AFB7E}.Debug|x86.Build.0 = Debug|Any CPU
+		{BCE72D9E-4F4D-4A85-8900-BE58576AFB7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCE72D9E-4F4D-4A85-8900-BE58576AFB7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCE72D9E-4F4D-4A85-8900-BE58576AFB7E}.Release|ARM.ActiveCfg = Release|Any CPU
+		{BCE72D9E-4F4D-4A85-8900-BE58576AFB7E}.Release|ARM.Build.0 = Release|Any CPU
+		{BCE72D9E-4F4D-4A85-8900-BE58576AFB7E}.Release|x64.ActiveCfg = Release|Any CPU
+		{BCE72D9E-4F4D-4A85-8900-BE58576AFB7E}.Release|x64.Build.0 = Release|Any CPU
+		{BCE72D9E-4F4D-4A85-8900-BE58576AFB7E}.Release|x86.ActiveCfg = Release|Any CPU
+		{BCE72D9E-4F4D-4A85-8900-BE58576AFB7E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,64 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\DIMOWO-GIT\\EasyXMLSerializer\\EasyXMLSerializerCore\\EasyXMLSerializerCore.csproj": {}
+  },
+  "projects": {
+    "E:\\DIMOWO-GIT\\EasyXMLSerializer\\EasyXMLSerializerCore\\EasyXMLSerializerCore.csproj": {
+      "version": "1.0.7.1",
+      "restore": {
+        "projectUniqueName": "E:\\DIMOWO-GIT\\EasyXMLSerializer\\EasyXMLSerializerCore\\EasyXMLSerializerCore.csproj",
+        "projectName": "EasyXMLSerializerCore",
+        "projectPath": "E:\\DIMOWO-GIT\\EasyXMLSerializer\\EasyXMLSerializerCore\\EasyXMLSerializerCore.csproj",
+        "packagesPath": "C:\\Users\\guido.local\\.nuget\\packages\\",
+        "outputPath": "E:\\DIMOWO-GIT\\EasyXMLSerializer\\EasyXMLSerializerCore\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\guido.local\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "D:\\Develope\\TeamServices\\Packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

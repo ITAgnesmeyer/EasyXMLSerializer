@@ -1,0 +1,73 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\DIMOWO-GIT\\EasyXMLSerializer\\EasyXMLSerialzerUWP\\EasyXMLSerialzerUWP.csproj": {}
+  },
+  "projects": {
+    "E:\\DIMOWO-GIT\\EasyXMLSerializer\\EasyXMLSerialzerUWP\\EasyXMLSerialzerUWP.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\DIMOWO-GIT\\EasyXMLSerializer\\EasyXMLSerialzerUWP\\EasyXMLSerialzerUWP.csproj",
+        "projectName": "EasyXMLSerialzerUWP",
+        "projectPath": "E:\\DIMOWO-GIT\\EasyXMLSerializer\\EasyXMLSerialzerUWP\\EasyXMLSerialzerUWP.csproj",
+        "packagesPath": "C:\\Users\\guido.local\\.nuget\\packages\\",
+        "outputPath": "E:\\DIMOWO-GIT\\EasyXMLSerializer\\EasyXMLSerialzerUWP\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\guido.local\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "uap10.0.10586"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "D:\\Develope\\TeamServices\\Packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "uap10.0.10586": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "uap10.0.10586": {
+          "dependencies": {
+            "Microsoft.NETCore.UniversalWindowsPlatform": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win10-arm": {
+          "#import": []
+        },
+        "win10-arm-aot": {
+          "#import": []
+        },
+        "win10-arm64-aot": {
+          "#import": []
+        },
+        "win10-x64": {
+          "#import": []
+        },
+        "win10-x64-aot": {
+          "#import": []
+        },
+        "win10-x86": {
+          "#import": []
+        },
+        "win10-x86-aot": {
+          "#import": []
+        }
+      }
+    }
+  }
+}
