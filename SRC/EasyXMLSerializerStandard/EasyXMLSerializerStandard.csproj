@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Description>Easy to use Serializer</Description>
+    <AssemblyVersion>1.0.7.1</AssemblyVersion>
+    <FileVersion>1.0.7.1</FileVersion>
+    <Version>1.0.7.1</Version>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>TRACE;STD</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\EasyXMLSerializer\LogEventArgs.cs" Link="LogEventArgs.cs" />
+    <Compile Include="..\EasyXMLSerializer\SerializeTool.cs" Link="SerializeTool.cs" />
+    <Compile Include="..\EasyXMLSerializer\Validation\DtdMessageType.cs" Link="Validation\DtdMessageType.cs" />
+    <Compile Include="..\EasyXMLSerializer\Validation\ValidationErrorInfo.cs" Link="Validation\ValidationErrorInfo.cs" />
+    <Compile Include="..\EasyXMLSerializer\Validation\XmlDTDValidation.cs" Link="Validation\XmlDTDValidation.cs" />
+    <Compile Include="..\EasyXMLSerializer\Validation\XmlFileResolver.cs" Link="Validation\XmlFileResolver.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Validation\" />
+  </ItemGroup>
+
+</Project>
