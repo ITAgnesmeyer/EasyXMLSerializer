@@ -78,3 +78,5 @@
 /EasyXMLSerializerStandard/bin/Debug/netstandard2.1/EasyXMLSerializerStandard.pdb
 /EasyXMLSerializerStandard/bin/Debug/netstandard2.1/EasyXMLSerializerStandard.dll
 /EasyXMLSerializerStandard/bin/Debug/netstandard2.1/EasyXMLSerializerStandard.deps.json
+/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+/obj/Debug/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs
