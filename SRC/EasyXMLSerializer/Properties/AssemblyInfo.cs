@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Dipl.-Ing.(FH) Guido Agnesmeyer")]
 [assembly: AssemblyProduct("EasyXMLSerializer")]
-[assembly: AssemblyCopyright("Copyright ©  2017 Dipl.-Ing.(FH) Guido Agnesmeyer")]
+[assembly: AssemblyCopyright("© Dipl.-Ing.(FH) Guido Agnesmeyer 2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

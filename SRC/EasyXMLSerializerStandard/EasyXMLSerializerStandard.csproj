@@ -6,6 +6,14 @@
     <AssemblyVersion>1.0.7.1</AssemblyVersion>
     <FileVersion>1.0.7.1</FileVersion>
     <Version>1.0.7.1</Version>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Authors>Dipl.-Ing.(FH) Guido Agnesmeyer</Authors>
+    <Copyright>© Dipl.-Ing.(FH) Guido Agnesmeyer 2020</Copyright>
+    <RepositoryUrl>https://github.com/ITAgnesmeyer/EasyXMLSerializer</RepositoryUrl>
+    <RepositoryType>XML-Serializer</RepositoryType>
+    <PackageTags>XML-Serializer</PackageTags>
+    <PackageReleaseNotes>NET-Standard 2.1</PackageReleaseNotes>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
