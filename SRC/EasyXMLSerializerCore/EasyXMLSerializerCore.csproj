@@ -6,7 +6,7 @@
     <Description>Easy to use Serializer</Description>
     <Authors>Dipl.-Ing.(FH) Guido Agnesmeyer</Authors>
     <Company>Dipl.-Ing.(FH) Guido Agnesmeyer</Company>
-    <Version>1.0.7.1</Version>
+    <Version>1.0.8</Version>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Copyright>© Dipl.-Ing.(FH) Guido Agnesmeyer 2020</Copyright>
     <PackageProjectUrl>https://github.com/ITAgnesmeyer/EasyXMLSerializer</PackageProjectUrl>
