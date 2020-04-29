@@ -1,8 +1,0 @@
-E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerializerCore\bin\Debug\netcoreapp2.2\EasyXMLSerializerCore.deps.json
-E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerializerCore\bin\Debug\netcoreapp2.2\EasyXMLSerializerCore.dll
-E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerializerCore\bin\Debug\netcoreapp2.2\EasyXMLSerializerCore.pdb
-E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerializerCore\obj\Debug\netcoreapp2.2\EasyXMLSerializerCore.csproj.CoreCompileInputs.cache
-E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerializerCore\obj\Debug\netcoreapp2.2\EasyXMLSerializerCore.AssemblyInfoInputs.cache
-E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerializerCore\obj\Debug\netcoreapp2.2\EasyXMLSerializerCore.AssemblyInfo.cs
-E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerializerCore\obj\Debug\netcoreapp2.2\EasyXMLSerializerCore.dll
-E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerializerCore\obj\Debug\netcoreapp2.2\EasyXMLSerializerCore.pdb
