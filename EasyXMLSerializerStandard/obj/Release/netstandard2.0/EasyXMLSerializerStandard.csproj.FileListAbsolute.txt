@@ -1,8 +1,0 @@
-E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerializerStandard\bin\Release\netstandard2.0\EasyXMLSerializerStandard.deps.json
-E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerializerStandard\bin\Release\netstandard2.0\EasyXMLSerializerStandard.dll
-E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerializerStandard\bin\Release\netstandard2.0\EasyXMLSerializerStandard.pdb
-E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerializerStandard\obj\Release\netstandard2.0\EasyXMLSerializerStandard.csproj.CoreCompileInputs.cache
-E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerializerStandard\obj\Release\netstandard2.0\EasyXMLSerializerStandard.AssemblyInfoInputs.cache
-E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerializerStandard\obj\Release\netstandard2.0\EasyXMLSerializerStandard.AssemblyInfo.cs
-E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerializerStandard\obj\Release\netstandard2.0\EasyXMLSerializerStandard.dll
-E:\DIMOWO-GIT\EasyXMLSerializer\EasyXMLSerializerStandard\obj\Release\netstandard2.0\EasyXMLSerializerStandard.pdb
