@@ -1,5 +1,0 @@
-E:\DIMOWO-GIT\EasyXMLSerializer\bin\Debug\EasyXMLSerializer.XML
-E:\DIMOWO-GIT\EasyXMLSerializer\bin\Debug\EasyXMLSerializer.dll
-E:\DIMOWO-GIT\EasyXMLSerializer\bin\Debug\EasyXMLSerializer.pdb
-E:\DIMOWO-GIT\EasyXMLSerializer\obj\Debug\EasyXMLSerializer.dll
-E:\DIMOWO-GIT\EasyXMLSerializer\obj\Debug\EasyXMLSerializer.pdb
