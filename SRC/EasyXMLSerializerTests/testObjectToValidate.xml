@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE TestObject SYSTEM "testObjectToValidate.dtd">
+<TestObject>
+	<StringValue>string</StringValue>
+	<BoolValue>true</BoolValue>
+	<IntValue>1</IntValue>
+	<ShortValue>200</ShortValue>
+	<ByteValue>1</ByteValue>
+	<FloatValue>1.5</FloatValue>
+	<DoubleValue>1.6553</DoubleValue>
+	<DecimalValue>1.3232</DecimalValue>
+	<DateTimeValue>2020-05-30T00:00:00</DateTimeValue>
+	<ObjectValue xsi:type="xsd:string">hallo</ObjectValue>
+</TestObject>

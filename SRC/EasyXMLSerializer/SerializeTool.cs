@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Xml;
@@ -7,11 +8,12 @@ using EasyXMLSerializer.Validation;
 namespace EasyXMLSerializer
 {
     /// <summary>
-    /// SerializeTool
+    ///// SerializeTool
     /// </summary>
     public class SerializeTool
     {
         private readonly StringBuilder _LogStringBuilder;
+        private Dictionary<Type,XmlSerializer> _SerializerList;
 
         /// <summary>
         /// Event fired on Exceptions
@@ -27,10 +29,38 @@ namespace EasyXMLSerializer
         }
 
         /// <summary>
+        /// Constructor for adding Types.
+        /// this will create a internal list of XmlSerializers for each Type given.
+        /// This will slow down the creation time but spead up the Serialization Time.
+        /// </summary>
+        /// <param name="types">List of Types </param>
+        public SerializeTool(Type[] types):this()
+        {
+            this._SerializerList = new Dictionary<Type, XmlSerializer>();
+            foreach (Type type in types)
+            {
+                var serializer = new XmlSerializer(type);
+                this._SerializerList.Add(type, serializer);
+            }
+        }
+        /// <summary>
         /// Constructor 
         /// </summary>
         /// <param name="fileName">Path to the File for Serialization</param>
         public SerializeTool(string fileName):this()
+        {
+            this.ConfigurationFileName = fileName;
+        }
+
+     
+        /// <summary>
+        /// Constructor for adding Types.
+        /// this will create a internal list of XmlSerializers for each Type given.
+        /// This will slow down the creation time but spead up the Serialization Time.
+        /// </summary>
+        /// <param name="fileName"></param>
+        /// <param name="types"></param>
+        public SerializeTool(string fileName, Type[] types) : this(types)
         {
             this.ConfigurationFileName = fileName;
         }
@@ -52,7 +82,7 @@ namespace EasyXMLSerializer
         /// Unmaps the Events from the XmlSerilizer Object
         /// </summary>
         /// <param name="serializer"></param>
-        private void DisposeXmlSerializer(XmlSerializer serializer)
+        private void UnMapEvents(XmlSerializer serializer)
         {
             if (serializer == null) return;
 
@@ -63,14 +93,31 @@ namespace EasyXMLSerializer
         }
 
         /// <summary>
-        /// Creates a new XmlSerilizer
+        /// Creates a new XmlSerilizer or grap it from the intern List.
         /// </summary>
         /// <param name="objectType">Type of the Object to be serialized</param>
         /// <returns>Returns a new Instance of XmlSerilizer</returns>
-        private XmlSerializer NewXmlSerializer(Type objectType)
+        private XmlSerializer GetXmlSerializer(Type objectType)
         {
+            XmlSerializer returnSerializer = null;
             this._LogStringBuilder.Clear();
-            XmlSerializer returnSerializer = new XmlSerializer(objectType);
+            if (this._SerializerList != null)
+            {
+                if (this._SerializerList.ContainsKey(objectType))
+                {
+                    returnSerializer = this._SerializerList[objectType];
+                }
+                else
+                {
+                    returnSerializer = new XmlSerializer(objectType);
+                    this._SerializerList.Add(objectType, returnSerializer);
+                }
+            }
+            else
+            {
+                returnSerializer = new XmlSerializer(objectType);   
+            }
+             
             MapEvents(returnSerializer);
             return returnSerializer;
         }
@@ -111,7 +158,7 @@ namespace EasyXMLSerializer
             XmlSerializer serializer = null;
             try
             {
-                serializer = NewXmlSerializer(typeof(T));
+                serializer = GetXmlSerializer(typeof(T));
 
                 using (var sr = new StringReader(xmlString))
                 {
@@ -123,12 +170,13 @@ namespace EasyXMLSerializer
             }
             catch (Exception ex)
             {
+                this.LastError = BuildLastErrorString(ex);
                 OnLogEvent(ex.ToString());
-                this.LastError = ex.Message;
+               
             }
             finally
             {
-                DisposeXmlSerializer(serializer);
+                UnMapEvents(serializer);
             }
 
             return returnObject;
@@ -146,17 +194,17 @@ namespace EasyXMLSerializer
             XmlSerializer serializer = null;
             try
             {
-                serializer = NewXmlSerializer(typeof(T));
+                serializer = GetXmlSerializer(typeof(T));
                 returnObject = (T) serializer.Deserialize(stream);
             }
             catch (Exception ex)
             {
-                this.LastError = ex.Message;
+                this.LastError = BuildLastErrorString(ex);
                 OnLogEvent($@"{this.ConfigurationFileName}:{ex.Message}");
             }
             finally
             {
-                DisposeXmlSerializer(serializer);
+                UnMapEvents(serializer);
             }
             return returnObject;
         }
@@ -216,7 +264,7 @@ namespace EasyXMLSerializer
             XmlSerializer serializer = null;
             try
             {
-                serializer = NewXmlSerializer(typeof(T));
+                serializer = GetXmlSerializer(typeof(T));
 
                 using (XmlWriter writer = XmlWriter.Create(stream, xmlSettings))
                 {
@@ -239,16 +287,27 @@ namespace EasyXMLSerializer
             }
             catch (Exception ex)
             {
-                this.LastError = ex.Message;
+                this.LastError = BuildLastErrorString(ex);
                 OnLogEvent(ex.ToString());
                 return false;
             }
             finally
             {
-                DisposeXmlSerializer(serializer);
+                UnMapEvents(serializer);
             }
         }
 
+        private string BuildLastErrorString(Exception exception)
+        {
+            string retValue = exception.Message;
+            if (exception.InnerException != null)
+            {
+                retValue += '\n';
+                retValue += BuildLastErrorString(exception.InnerException);
+            }
+
+            return retValue;
+        }
         /// <summary>
         /// De-serialize a given XML-Fiel to a given Type
         /// </summary>
@@ -285,7 +344,7 @@ namespace EasyXMLSerializer
             XmlSerializer serializer = null;
             try
             {
-                serializer = NewXmlSerializer(typeof(T));
+                serializer = GetXmlSerializer(typeof(T));
 
                 using (XmlReader fs = XmlReader.Create(this.ConfigurationFileName))
                 {
@@ -294,12 +353,12 @@ namespace EasyXMLSerializer
             }
             catch (Exception ex)
             {
-                this.LastError = ex.Message;
+                this.LastError = BuildLastErrorString(ex);
                 OnLogEvent($@"{this.ConfigurationFileName}:{ex.Message}");
             }
             finally
             {
-                DisposeXmlSerializer(serializer);
+                UnMapEvents(serializer);
             }
 
             return returnObject;
@@ -319,7 +378,7 @@ namespace EasyXMLSerializer
 
             try
             {
-                serializer = NewXmlSerializer(typeof(T));
+                serializer = GetXmlSerializer(typeof(T));
 
                 using (XmlWriter writer = XmlWriter.Create(this.ConfigurationFileName, xmlSettings))
                 {
@@ -339,13 +398,13 @@ namespace EasyXMLSerializer
             }
             catch (Exception ex)
             {
-                this.LastError = ex.Message;
+                this.LastError = BuildLastErrorString(ex);
                 OnLogEvent($@"{this.ConfigurationFileName}:{ex.Message}");
                 return false;
             }
             finally
             {
-                DisposeXmlSerializer(serializer);
+                UnMapEvents(serializer);
             }
         }
 
@@ -370,7 +429,7 @@ namespace EasyXMLSerializer
         public string ConfigurationFileName { get; set; }
 
         /// <summary>
-        /// 
+        /// If True the Serializer do not create Namespaces
         /// </summary>
         public bool EmptyNamespaces{get;set;}
 
@@ -405,5 +464,6 @@ namespace EasyXMLSerializer
         {
             return new XmlDtdValidator(file);
         }
+
     }
 }

@@ -1,0 +1,49 @@
+﻿<?xml encoding="UTF-8"?>
+
+<!ELEMENT TestObject (StringValue,BoolValue,IntValue,ShortValue,
+ByteValue,FloatValue,DoubleValue,DecimalValue,
+DateTimeValue,ObjectValue)>
+<!ATTLIST TestObject
+xmlns CDATA #FIXED ''>
+
+<!ELEMENT StringValue (#PCDATA)>
+<!ATTLIST StringValue
+xmlns CDATA #FIXED ''>
+
+<!ELEMENT BoolValue (#PCDATA)>
+<!ATTLIST BoolValue
+xmlns CDATA #FIXED ''>
+
+<!ELEMENT IntValue (#PCDATA)>
+<!ATTLIST IntValue
+xmlns CDATA #FIXED ''>
+
+<!ELEMENT ShortValue (#PCDATA)>
+<!ATTLIST ShortValue
+xmlns CDATA #FIXED ''>
+
+<!ELEMENT ByteValue (#PCDATA)>
+<!ATTLIST ByteValue
+xmlns CDATA #FIXED ''>
+
+<!ELEMENT FloatValue (#PCDATA)>
+<!ATTLIST FloatValue
+xmlns CDATA #FIXED ''>
+
+<!ELEMENT DoubleValue (#PCDATA)>
+<!ATTLIST DoubleValue
+xmlns CDATA #FIXED ''>
+
+<!ELEMENT DecimalValue (#PCDATA)>
+<!ATTLIST DecimalValue
+xmlns CDATA #FIXED ''>
+
+<!ELEMENT DateTimeValue (#PCDATA)>
+<!ATTLIST DateTimeValue
+xmlns CDATA #FIXED ''>
+
+<!ELEMENT ObjectValue (#PCDATA)>
+<!ATTLIST ObjectValue
+xmlns CDATA #FIXED ''
+xmlns:xsi CDATA #FIXED 'http://www.w3.org/2001/XMLSchema-instance'
+xsi:type NMTOKEN #REQUIRED>
