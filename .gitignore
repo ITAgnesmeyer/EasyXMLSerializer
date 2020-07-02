@@ -424,3 +424,9 @@
 /SRC/EasyXMLSerializerTests/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
 /SRC/EasyXMLSerializerTests/obj/Debug/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs
 /SRC/EasyXMLSerializerTests/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttributes.cs
+/NugetPackage/nuget.exe
+/SRC/EasyXMLSerializerCore/bin/Debug/EasyXMLSerializerCore.1.0.9.nupkg
+/SRC/EasyXMLSerializerCore/obj/Debug/EasyXMLSerializerCore.1.0.9.nuspec
+/SRC/EasyXMLSerializerStandard/bin/Debug/EasyXMLSerializerStandard.1.0.9.nupkg
+/SRC/EasyXMLSerializerStandard/obj/Debug/EasyXMLSerializerStandard.1.0.9.nuspec
+/NugetPackage/EasyXMLSerializer.1.0.9.nupkg

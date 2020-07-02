@@ -8,7 +8,7 @@ using EasyXMLSerializer.Validation;
 namespace EasyXMLSerializer
 {
     /// <summary>
-    ///// SerializeTool
+    /// SerializeTool
     /// </summary>
     public class SerializeTool
     {

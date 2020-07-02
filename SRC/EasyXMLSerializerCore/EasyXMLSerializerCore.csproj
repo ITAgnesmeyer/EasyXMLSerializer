@@ -6,7 +6,7 @@
     <Description>Easy to use Serializer</Description>
     <Authors>Dipl.-Ing.(FH) Guido Agnesmeyer</Authors>
     <Company>Dipl.-Ing.(FH) Guido Agnesmeyer</Company>
-    <Version>1.0.8</Version>
+    <Version>1.0.9</Version>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Copyright>© Dipl.-Ing.(FH) Guido Agnesmeyer 2020</Copyright>
     <PackageProjectUrl>https://github.com/ITAgnesmeyer/EasyXMLSerializer</PackageProjectUrl>
@@ -34,5 +34,9 @@
   <ItemGroup>
     <Folder Include="Validation\" />
   </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="copy $(TargetDir)*.dll $(SolutionDir)NugetPackage\lib\netcoreapp3.1\*" />
+  </Target>
 
 </Project>
