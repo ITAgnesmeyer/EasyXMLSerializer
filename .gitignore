@@ -430,3 +430,4 @@
 /SRC/EasyXMLSerializerStandard/bin/Debug/EasyXMLSerializerStandard.1.0.9.nupkg
 /SRC/EasyXMLSerializerStandard/obj/Debug/EasyXMLSerializerStandard.1.0.9.nuspec
 /NugetPackage/EasyXMLSerializer.1.0.9.nupkg
+*.nupkg
