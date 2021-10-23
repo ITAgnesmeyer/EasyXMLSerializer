@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE TestObject SYSTEM "testObjectToValidate.dtd">
-<TestObject>
+<TestObject xmlns="http://tempuri.org/testObjectToValidate" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://tempuri.org/testObjectToValidate testObjectToValidate.xsd">
 	<StringValue>string</StringValue>
 	<BoolValue>true</BoolValue>
 	<IntValue>1</IntValue>

@@ -464,6 +464,27 @@ namespace EasyXMLSerializer
         {
             return new XmlDtdValidator(file);
         }
+        /// <summary>
+        /// Gets a XsdValidator.
+        /// You can Validate your XML-File with the XSD - Information form your Header.
+        /// This function takes the full-path of an xml-File
+        /// </summary>
+        /// <param name="file">Full - Path to XML-File</param>
+        /// <returns></returns>
+        public Validation.XmlXsdValidator GetXsdValidator(string file)
+        {
+            return new XmlXsdValidator(file);
+        }
 
+        /// <summary>
+        /// Gets a XsdValidator.
+        /// You can Validate your XML-File with the XSD - Information form your Header.
+        /// This function takes the given XML-File
+        /// </summary>
+        /// <returns>XmlXsdValidator</returns>
+        public Validation.XmlXsdValidator GetXsdValidator()
+        {
+            return new XmlXsdValidator(this.ConfigurationFileName);
+        }
     }
 }

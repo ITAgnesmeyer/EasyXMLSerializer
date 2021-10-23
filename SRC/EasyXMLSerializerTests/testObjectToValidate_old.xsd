@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/testObjectToValidate" elementFormDefault="qualified" targetNamespace="http://tempuri.org/testObjectToValidate" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="TestObject">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="StringValue" />
+				<xs:element ref="BoolValue" />
+				<xs:element ref="IntValue" />
+				<xs:element ref="ShortValue" />
+				<xs:element ref="ByteValue" />
+				<xs:element ref="FloatValue" />
+				<xs:element ref="DoubleValue" />
+				<xs:element ref="DecimalValue" />
+				<xs:element ref="DateTimeValue" />
+				<xs:element ref="ObjectValue" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="StringValue">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string" />
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="BoolValue">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string" />
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="IntValue">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string" />
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ShortValue">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string" />
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ByteValue">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string" />
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="FloatValue">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string" />
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DoubleValue">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string" />
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DecimalValue">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string" />
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DateTimeValue">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string" />
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ObjectValue">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute use="required" />
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

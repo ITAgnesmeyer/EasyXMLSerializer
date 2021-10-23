@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE TestObject SYSTEM "testObjectToValidate.dtd">
-<TestObject>
+<TestObject xmlns="http://tempuri.org/testObjectToValidate" 
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+			xsi:schemaLocation="http://tempuri.org/testObjectToValidate testObjectToValidate.xsd">
 	<StringValue>string</StringValue>
 	<BoolValue>true</BoolValue>
 	<IntValue>1</IntValue>
@@ -10,5 +11,4 @@
 	<DoubleValue>1.6553</DoubleValue>
 	<DecimalValue>1.3232</DecimalValue>
 	<DateTimeValue>2020-05-30T00:00:00</DateTimeValue>
-	<ObjectValue>hallo</ObjectValue>
 </TestObject>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="NewDataSet" targetNamespace="http://tempuri.org/testObjectToValidate" xmlns:mstns="http://tempuri.org/testObjectToValidate" xmlns="http://tempuri.org/testObjectToValidate" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TestObject" msprop:Generator_RowEvHandlerName="TestObjectRowChangeEventHandler" msprop:Generator_RowDeletedName="TestObjectRowDeleted" msprop:Generator_RowDeletingName="TestObjectRowDeleting" msprop:Generator_RowEvArgName="TestObjectRowChangeEvent" msprop:Generator_TablePropName="TestObject" msprop:Generator_RowChangedName="TestObjectRowChanged" msprop:Generator_RowChangingName="TestObjectRowChanging" msprop:Generator_TableClassName="TestObjectDataTable" msprop:Generator_RowClassName="TestObjectRow" msprop:Generator_TableVarName="tableTestObject" msprop:Generator_UserTableName="TestObject">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="StringValue" msprop:Generator_ColumnPropNameInRow="StringValue" msprop:Generator_ColumnPropNameInTable="StringValueColumn" msprop:Generator_ColumnVarNameInTable="columnStringValue" msprop:Generator_UserColumnName="StringValue" type="xs:string" minOccurs="0" />
+        <xs:element name="BoolValue" msprop:Generator_ColumnPropNameInRow="BoolValue" msprop:Generator_ColumnPropNameInTable="BoolValueColumn" msprop:Generator_ColumnVarNameInTable="columnBoolValue" msprop:Generator_UserColumnName="BoolValue" type="xs:string" minOccurs="0" />
+        <xs:element name="IntValue" msprop:Generator_ColumnPropNameInRow="IntValue" msprop:Generator_ColumnPropNameInTable="IntValueColumn" msprop:Generator_ColumnVarNameInTable="columnIntValue" msprop:Generator_UserColumnName="IntValue" type="xs:string" minOccurs="0" />
+        <xs:element name="ShortValue" msprop:Generator_ColumnPropNameInRow="ShortValue" msprop:Generator_ColumnPropNameInTable="ShortValueColumn" msprop:Generator_ColumnVarNameInTable="columnShortValue" msprop:Generator_UserColumnName="ShortValue" type="xs:string" minOccurs="0" />
+        <xs:element name="ByteValue" msprop:Generator_ColumnPropNameInRow="ByteValue" msprop:Generator_ColumnPropNameInTable="ByteValueColumn" msprop:Generator_ColumnVarNameInTable="columnByteValue" msprop:Generator_UserColumnName="ByteValue" type="xs:string" minOccurs="0" />
+        <xs:element name="FloatValue" msprop:Generator_ColumnPropNameInRow="FloatValue" msprop:Generator_ColumnPropNameInTable="FloatValueColumn" msprop:Generator_ColumnVarNameInTable="columnFloatValue" msprop:Generator_UserColumnName="FloatValue" type="xs:string" minOccurs="0" />
+        <xs:element name="DoubleValue" msprop:Generator_ColumnPropNameInRow="DoubleValue" msprop:Generator_ColumnPropNameInTable="DoubleValueColumn" msprop:Generator_ColumnVarNameInTable="columnDoubleValue" msprop:Generator_UserColumnName="DoubleValue" type="xs:string" minOccurs="0" />
+        <xs:element name="DecimalValue" msprop:Generator_ColumnPropNameInRow="DecimalValue" msprop:Generator_ColumnPropNameInTable="DecimalValueColumn" msprop:Generator_ColumnVarNameInTable="columnDecimalValue" msprop:Generator_UserColumnName="DecimalValue" type="xs:string" minOccurs="0" />
+        <xs:element name="DateTimeValue" msprop:Generator_ColumnPropNameInRow="DateTimeValue" msprop:Generator_ColumnPropNameInTable="DateTimeValueColumn" msprop:Generator_ColumnVarNameInTable="columnDateTimeValue" msprop:Generator_UserColumnName="DateTimeValue" type="xs:dateTime" minOccurs="0" />
+        <xs:element name="ObjectValue" msprop:Generator_ColumnPropNameInRow="ObjectValue" msprop:Generator_ColumnPropNameInTable="ObjectValueColumn" msprop:Generator_ColumnVarNameInTable="columnObjectValue" msprop:Generator_UserColumnName="ObjectValue" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="NewDataSet" msprop:Generator_DataSetName="NewDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="TestObject" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

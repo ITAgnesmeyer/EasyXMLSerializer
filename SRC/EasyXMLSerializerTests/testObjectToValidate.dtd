@@ -44,6 +44,4 @@ xmlns CDATA #FIXED ''>
 
 <!ELEMENT ObjectValue (#PCDATA)>
 <!ATTLIST ObjectValue
-xmlns CDATA #FIXED ''
-xmlns:xsi CDATA #FIXED 'http://www.w3.org/2001/XMLSchema-instance'
-xsi:type NMTOKEN #REQUIRED>
+xmlns CDATA #FIXED ''>

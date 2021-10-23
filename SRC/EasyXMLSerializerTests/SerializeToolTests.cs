@@ -1,6 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using System.Collections.Generic;
 using System.Text;
 using System.Diagnostics;
 using System.IO;
@@ -241,7 +240,7 @@ namespace EasyXMLSerializer.Tests
             Assert.AreEqual("Der Wert darf nicht NULL sein.\r\nParametername: inputUri\r\n", result);
         }
 
-        [TestMethod()]
+        [TestMethod(), TestCategory("Validator")]
         public void GetDtdValidatorTest()
         {
             SerializeTool serialize = new SerializeTool();
@@ -265,7 +264,7 @@ namespace EasyXMLSerializer.Tests
 
         }
 
-        [TestMethod()]
+        [TestMethod(), TestCategory("Validator")]
         public void GetDtdValidatorTest1()
         {
             SerializeTool serialize = new SerializeTool("testObjectToValidate.xml");
@@ -287,109 +286,49 @@ namespace EasyXMLSerializer.Tests
                 Assert.Fail(message);
             }
         }
-    }
-    [TestClass]
-    public class XmlSerializerSpeedTest
-    {
-        [ClassCleanup]
-        public static void ClassCleanup()
+        [TestMethod(), TestCategory("Validator")]
+        public void GetXsdValidatorTest()
         {
-            if (File.Exists("test9999.xml"))
+            SerializeTool serialize = new SerializeTool();
+            var validator = serialize.GetXsdValidator("testobjectToValidate1.xml");
+            Assert.IsNotNull(validator);
+            if (validator.Validate())
             {
-                for (int i = 0; i < 10000; i++)
+                Debug.Print("OK");
+            }
+            else
+            {
+                string message = "";
+                foreach (ValidationErrorInfo validatorLastException in validator.LastExceptions)
                 {
-                    File.Delete("test" + i + ".xml");
+                    message += "\n";
+                    message += $"{validatorLastException.Message} (row/col)=>{validatorLastException.LineNumber}/{validatorLastException.LinePosition}";
                 }
 
+                Assert.Fail(message);
             }
         }
-        [TestMethod]
-        public void TestNewSerializerForEveryRowWriteFile()
+        [TestMethod(), TestCategory("Validator")]
+        public void GetXmlValidatorFaialTest()
         {
-            SerializeTool serializer = new SerializeTool();
-            for (int i = 0; i < 10000; i++)
+            SerializeTool serialize = new SerializeTool();
+            var validator = serialize.GetXsdValidator("testobjectToValidate1Fail.xml");
+            Assert.IsNotNull(validator);
+            if (validator.Validate())
             {
-                TestObject testObject = SerializeToolTests.GetTestObject();
-                if (!serializer.WriteXmlFile(testObject, "test" + i + ".xml"))
+                Assert.Fail("the file must be invalid!");
+            }
+            else
+            {
+                string message = "";
+                foreach (ValidationErrorInfo validatorLastException in validator.LastExceptions)
                 {
-                    Assert.Fail(serializer.LastError);
+                    message += "\n";
+                    message += $"{validatorLastException.Message} (row/col)=>{validatorLastException.LineNumber}/{validatorLastException.LinePosition}";
                 }
-            }
 
-        }
-        [TestMethod]
-        public void TestSingleSerializerForTypeWriteFile()
-        {
-            Type[] types = new Type[] {typeof(TestObject)};
-            SerializeTool serializer = new SerializeTool(types);
-            for (int i = 0; i < 10000; i++)
-            {
-                TestObject testObject = SerializeToolTests.GetTestObject();
-                if (!serializer.WriteXmlFile(testObject, "test" + i + ".xml"))
-                {
-                    Assert.Fail(serializer.LastError);
-                }
-            }
-
-            //for (int i = 0; i < 1000; i++)
-            //{
-            //    File.Delete("test" + i + ".xml");
-            //}
-        }
-        [TestMethod]
-        public void TestSingleSerializerForTypeReadString()
-        {
-            Type[] types = new Type[] {typeof(TestObject)};
-            SerializeTool serializer = new SerializeTool(types);
-            for (int i = 0; i < 10000; i++)
-            {
-                var testObject = serializer.ReadXmlFromString<TestObject>(SerializeToolTests.OBJ_RESULT);
-                if (testObject == null)
-                    Assert.Fail(serializer.LastError);
-            }
-        }
-
-        [TestMethod]
-        public void TestNewSerializerForEveryRowReadString()
-        {
-            SerializeTool serializer = new SerializeTool();
-            for (int i = 0; i < 10000; i++)
-            {
-                var testObject = serializer.ReadXmlFromString<TestObject>(SerializeToolTests.OBJ_RESULT);
-                if (testObject == null)
-                    Assert.Fail(serializer.LastError);
-            }
-        }
-
-        [TestMethod]
-        public void TestSingleSerializerForTypeWriteSingleFile()
-        {
-            Type[] types = new Type[] {typeof(TestObject), typeof(List<TestObject>)};
-            SerializeTool serializer = new SerializeTool(types);
-            List<TestObject> testObjects = new List<TestObject>();
-            for (int i = 0; i < 10000; i++)
-            {
-                testObjects.Add(SerializeToolTests.GetTestObject());
-            }
-
-            if (!serializer.WriteXmlFile(testObjects, "test_objects.xml"))
-            {
-                Assert.Fail(serializer.LastError);
-            }
-        }
-        [TestMethod]
-        public void TestNewSerializerForEveryRowWriteSingleFile()
-        {
-            SerializeTool serializer = new SerializeTool();
-            List<TestObject> testObjects = new List<TestObject>();
-            for (int i = 0; i < 10000; i++)
-            {
-                testObjects.Add(SerializeToolTests.GetTestObject());
-            }
-
-            if (!serializer.WriteXmlFile(testObjects, "test_objects.xml"))
-            {
-                Assert.Fail(serializer.LastError);
+                Assert.IsTrue(message.Length > 0);
+                Assert.IsTrue(message.Contains("Elemente: 'ObjectValue'"));
             }
         }
     }

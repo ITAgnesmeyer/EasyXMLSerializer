@@ -12,6 +12,7 @@ namespace EasyXMLSerializer.Validation
         {
             this.Folder = folder;
         }
+        
         public override object GetEntity(Uri absoluteUri, string role, Type ofObjectToReturn)
         {
             try
