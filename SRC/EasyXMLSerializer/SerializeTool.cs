@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Text;
 using System.Xml;
@@ -98,6 +99,7 @@ namespace EasyXMLSerializer
         /// </summary>
         /// <param name="objectType">Type of the Object to be serialized</param>
         /// <returns>Returns a new Instance of XmlSerilizer</returns>
+     
         private System.Xml.Serialization.XmlSerializer GetXmlSerializer(Type objectType)
         {
             System.Xml.Serialization.XmlSerializer returnSerializer = null;
@@ -110,12 +112,14 @@ namespace EasyXMLSerializer
                 }
                 else
                 {
+                    //DOTNET 5 und DOTNET 6 BUG FileNotFoundException
                     returnSerializer = new System.Xml.Serialization.XmlSerializer(objectType);
                     this._SerializerList.Add(objectType, returnSerializer);
                 }
             }
             else
             {
+                //DOTNET 5 und DOTNET 6 BUG FileNotFoundException 
                 returnSerializer = new System.Xml.Serialization.XmlSerializer(objectType);   
             }
              
