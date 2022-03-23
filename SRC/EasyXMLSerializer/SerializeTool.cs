@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Xml;
-using System.Xml.Serialization;
+
 using EasyXMLSerializer.Validation;
+
 namespace EasyXMLSerializer
 {
     /// <summary>
@@ -13,7 +14,7 @@ namespace EasyXMLSerializer
     public class SerializeTool
     {
         private readonly StringBuilder _LogStringBuilder;
-        private Dictionary<Type,XmlSerializer> _SerializerList;
+        private Dictionary<Type,System.Xml.Serialization.XmlSerializer> _SerializerList;
 
         /// <summary>
         /// Event fired on Exceptions
@@ -36,10 +37,10 @@ namespace EasyXMLSerializer
         /// <param name="types">List of Types </param>
         public SerializeTool(Type[] types):this()
         {
-            this._SerializerList = new Dictionary<Type, XmlSerializer>();
+            this._SerializerList = new Dictionary<Type, System.Xml.Serialization.XmlSerializer>();
             foreach (Type type in types)
             {
-                var serializer = new XmlSerializer(type);
+                var serializer = new System.Xml.Serialization.XmlSerializer(type);
                 this._SerializerList.Add(type, serializer);
             }
         }
@@ -69,7 +70,7 @@ namespace EasyXMLSerializer
         /// Maps the Events of XmlSerilizer.
         /// </summary>
         /// <param name="serializer">XmlSerializer Object</param>
-        private void MapEvents(XmlSerializer serializer)
+        private void MapEvents(System.Xml.Serialization.XmlSerializer serializer)
         {
             if (serializer == null) return;
             serializer.UnknownAttribute += OnUnknownAttribute;
@@ -82,7 +83,7 @@ namespace EasyXMLSerializer
         /// Unmaps the Events from the XmlSerilizer Object
         /// </summary>
         /// <param name="serializer"></param>
-        private void UnMapEvents(XmlSerializer serializer)
+        private void UnMapEvents(System.Xml.Serialization.XmlSerializer serializer)
         {
             if (serializer == null) return;
 
@@ -97,9 +98,9 @@ namespace EasyXMLSerializer
         /// </summary>
         /// <param name="objectType">Type of the Object to be serialized</param>
         /// <returns>Returns a new Instance of XmlSerilizer</returns>
-        private XmlSerializer GetXmlSerializer(Type objectType)
+        private System.Xml.Serialization.XmlSerializer GetXmlSerializer(Type objectType)
         {
-            XmlSerializer returnSerializer = null;
+            System.Xml.Serialization.XmlSerializer returnSerializer = null;
             this._LogStringBuilder.Clear();
             if (this._SerializerList != null)
             {
@@ -109,38 +110,38 @@ namespace EasyXMLSerializer
                 }
                 else
                 {
-                    returnSerializer = new XmlSerializer(objectType);
+                    returnSerializer = new System.Xml.Serialization.XmlSerializer(objectType);
                     this._SerializerList.Add(objectType, returnSerializer);
                 }
             }
             else
             {
-                returnSerializer = new XmlSerializer(objectType);   
+                returnSerializer = new System.Xml.Serialization.XmlSerializer(objectType);   
             }
              
             MapEvents(returnSerializer);
             return returnSerializer;
         }
 
-        private void OnUnreferencedObject(object sender, UnreferencedObjectEventArgs e)
+        private void OnUnreferencedObject(object sender, System.Xml.Serialization.UnreferencedObjectEventArgs e)
         {
             var value = $"UnreferecedObject:{e.UnreferencedObject} ID:{e.UnreferencedId}";
             this._LogStringBuilder.AppendLine(value);
         }
 
-        private void OnUnknownNode(object sender, XmlNodeEventArgs e)
+        private void OnUnknownNode(object sender, System.Xml.Serialization.XmlNodeEventArgs e)
         {
             var value = $"UnknownNode:{e.Name} =>L:{e.LineNumber},C:{e.LinePosition}";
             this._LogStringBuilder.AppendLine(value);
         }
 
-        private void OnUnknownElement(object sender, XmlElementEventArgs e)
+        private void OnUnknownElement(object sender, System.Xml.Serialization.XmlElementEventArgs e)
         {
             var value = $"UnknownElement:{e.ExpectedElements},L:{e.LineNumber},C:{e.LinePosition}";
             this._LogStringBuilder.AppendLine(value);
         }
 
-        private void OnUnknownAttribute(object sender, XmlAttributeEventArgs e)
+        private void OnUnknownAttribute(object sender, System.Xml.Serialization.XmlAttributeEventArgs e)
         {
             var value = $"UnknownAttribute:{e.ExpectedAttributes},L:{e.LineNumber},C:{e.LinePosition}";
             this._LogStringBuilder.AppendLine(value);
@@ -155,14 +156,14 @@ namespace EasyXMLSerializer
         public T ReadXmlFromString<T>(string xmlString)
         {
             T returnObject = default(T);
-            XmlSerializer serializer = null;
+            System.Xml.Serialization.XmlSerializer serializer = null;
             try
             {
                 serializer = GetXmlSerializer(typeof(T));
 
                 using (var sr = new StringReader(xmlString))
                 {
-                    using (var tr = new XmlTextReader(sr))
+                    using (var tr = new System.Xml.XmlTextReader(sr))
                     {
                         returnObject = (T) serializer.Deserialize(tr);
                     }
@@ -191,7 +192,7 @@ namespace EasyXMLSerializer
         public T ReadXmlFromStream<T>(Stream stream)
         {
             T returnObject = default(T);
-            XmlSerializer serializer = null;
+            System.Xml.Serialization.XmlSerializer serializer = null;
             try
             {
                 serializer = GetXmlSerializer(typeof(T));
@@ -261,7 +262,7 @@ namespace EasyXMLSerializer
         public bool WriteXmlToStream<T>(T objectToWrite, Stream stream)
         {
             XmlWriterSettings xmlSettings = SetXmlWriterSettings();
-            XmlSerializer serializer = null;
+            System.Xml.Serialization.XmlSerializer serializer = null;
             try
             {
                 serializer = GetXmlSerializer(typeof(T));
@@ -270,7 +271,7 @@ namespace EasyXMLSerializer
                 {
                     if (this.EmptyNamespaces)
                     {
-                        var xmlns = new XmlSerializerNamespaces();
+                        var xmlns = new System.Xml.Serialization.XmlSerializerNamespaces();
                         xmlns.Add(string.Empty, string.Empty);
                         serializer.Serialize(writer, objectToWrite, xmlns);
                     }
@@ -341,7 +342,7 @@ namespace EasyXMLSerializer
         public T ReadXmlFile<T>()
         {
             T returnObject = default(T);
-            XmlSerializer serializer = null;
+            System.Xml.Serialization.XmlSerializer serializer = null;
             try
             {
                 serializer = GetXmlSerializer(typeof(T));
@@ -374,7 +375,7 @@ namespace EasyXMLSerializer
         {
             XmlWriterSettings xmlSettings = SetXmlWriterSettings();
 
-            XmlSerializer serializer = null;
+            System.Xml.Serialization.XmlSerializer serializer = null;
 
             try
             {
@@ -384,7 +385,7 @@ namespace EasyXMLSerializer
                 {
                     if (this.EmptyNamespaces)
                     {
-                        var xmlns = new XmlSerializerNamespaces();
+                        var xmlns = new System.Xml.Serialization.XmlSerializerNamespaces();
                         xmlns.Add(string.Empty, string.Empty);
                         serializer.Serialize(writer, objectToWrite, xmlns);
                     }
@@ -460,7 +461,7 @@ namespace EasyXMLSerializer
         /// </summary>
         /// <param name="file">Full - Path to XML-File</param>
         /// <returns>XmlDtdValidator</returns>
-        public XmlDtdValidator GetDtdValidator(string file)
+        public  XmlDtdValidator GetDtdValidator(string file)
         {
             return new XmlDtdValidator(file);
         }
