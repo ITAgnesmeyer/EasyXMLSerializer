@@ -3,10 +3,26 @@ using System;
 using System.Text;
 using System.Diagnostics;
 using System.IO;
+using System.Xml.Serialization;
 using EasyXMLSerializer.Validation;
 
 namespace EasyXMLSerializer.Tests
 {
+    //[XmlType("TestObject", Namespace = "http://test/xml")]
+    public class TestObject2
+    {
+        public string StringValue{get;set;}
+        public bool BoolValue{get;set;}
+        public int IntValue{get;set;}
+        public short ShortValue{get;set;}
+        public byte ByteValue{get;set;}
+        public float FloatValue{get;set;}
+        public double DoubleValue{get; set; }
+        public decimal DecimalValue{get;set;}
+        public DateTime DateTimeValue{get;set;}
+        public object ObjectValue{get;set;}
+       
+    }
     public class TestObject
     {
         public string StringValue{get;set;}
@@ -22,7 +38,7 @@ namespace EasyXMLSerializer.Tests
        
     }
 
-    [TestClass()]
+    [TestClass]
     public class SerializeToolTests
     {
         public const string OBJ_RESULT =
@@ -39,9 +55,38 @@ namespace EasyXMLSerializer.Tests
   <ObjectValue xsi:type=""xsd:string"">hallo</ObjectValue>
 </TestObject>";
 
+        public const string OBJ_NS_RESULT = @"<n:TestObject2 xmlns:xsd=""http://www.w3.org/2001/XMLSchema"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns:n=""http://test/xml"">
+  <n:StringValue>string</n:StringValue>
+  <n:BoolValue>true</n:BoolValue>
+  <n:IntValue>1</n:IntValue>
+  <n:ShortValue>200</n:ShortValue>
+  <n:ByteValue>1</n:ByteValue>
+  <n:FloatValue>1.5</n:FloatValue>
+  <n:DoubleValue>1.6553</n:DoubleValue>
+  <n:DecimalValue>1.3232</n:DecimalValue>
+  <n:DateTimeValue>2020-05-30T00:00:00</n:DateTimeValue>
+  <n:ObjectValue xsi:type=""xsd:string"">hallo</n:ObjectValue>
+</n:TestObject2>";
+
         public static TestObject GetTestObject()
         {
             TestObject testObject = new TestObject();
+            testObject.StringValue = "string";
+            testObject.BoolValue = true;
+            testObject.IntValue = 1;
+            testObject.ShortValue = 200;
+            testObject.ByteValue = 1;
+            testObject.FloatValue = 1.5f;
+            testObject.DoubleValue = 1.6553d;
+            testObject.DecimalValue = (decimal) 1.3232;
+            testObject.DateTimeValue = new DateTime(2020, 05, 30);
+            testObject.ObjectValue = "hallo";
+            return testObject;
+        }
+
+        public static TestObject2 GetTestObject2()
+        {
+            TestObject2 testObject = new TestObject2();
             testObject.StringValue = "string";
             testObject.BoolValue = true;
             testObject.IntValue = 1;
@@ -69,7 +114,7 @@ namespace EasyXMLSerializer.Tests
             Assert.AreEqual(expectedObject.ObjectValue, testObject.ObjectValue);
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void SerializeToolTest()
         {
             
@@ -80,7 +125,7 @@ namespace EasyXMLSerializer.Tests
             ComparerObjectValues(expectedObject, testObject);
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void SerializeToolTest1()
         {
             SerializeTool serialize = new SerializeTool("test1.xml");
@@ -94,7 +139,7 @@ namespace EasyXMLSerializer.Tests
             Assert.AreEqual(OBJ_RESULT, xmlString);
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void SerializeToolTest2()
         {
             
@@ -109,7 +154,7 @@ namespace EasyXMLSerializer.Tests
             }
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void SerializeToolTest3()
         {
             SerializeTool serializer = new SerializeTool("testObject.xml",new Type[] {typeof(TestObject)});
@@ -119,7 +164,7 @@ namespace EasyXMLSerializer.Tests
             ComparerObjectValues(expected, testObject);
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void ReadXmlFromStringTest()
         {
             SerializeTool serialize = new SerializeTool();
@@ -130,7 +175,7 @@ namespace EasyXMLSerializer.Tests
 
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void ReadXmlFromStreamTest()
         {
             using (MemoryStream stream = new MemoryStream(Encoding.UTF8.GetBytes(OBJ_RESULT)))
@@ -144,7 +189,7 @@ namespace EasyXMLSerializer.Tests
             }
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void WriteXmlToStringTest()
         {
             SerializeTool serializer = new SerializeTool();
@@ -159,7 +204,7 @@ namespace EasyXMLSerializer.Tests
             }
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void WriteXmlToStreamTest()
         {
             using (MemoryStream stream = new MemoryStream())
@@ -183,7 +228,7 @@ namespace EasyXMLSerializer.Tests
             }
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void ReadXmlFileTest()
         {
             SerializeTool serializer = new SerializeTool("testObject.xml");
@@ -193,7 +238,7 @@ namespace EasyXMLSerializer.Tests
             ComparerObjectValues(expectedObject, testObject);
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void WriteXmlFileTest()
         {
             SerializeTool serialize = new SerializeTool("WriteFileTest.xml");
@@ -207,7 +252,7 @@ namespace EasyXMLSerializer.Tests
             Assert.AreEqual(OBJ_RESULT, xmlString);
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void ReadXmlFileTest1()
         {
             SerializeTool serializer = new SerializeTool();
@@ -217,7 +262,7 @@ namespace EasyXMLSerializer.Tests
             ComparerObjectValues(expectedObject, testObject);
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void WriteXmlFileTest1()
         {
             SerializeTool serialize = new SerializeTool();
@@ -231,7 +276,7 @@ namespace EasyXMLSerializer.Tests
             Assert.AreEqual(OBJ_RESULT, xmlString);
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void GetLogTextTest()
         {
             SerializeTool serialize = new SerializeTool();
@@ -239,8 +284,26 @@ namespace EasyXMLSerializer.Tests
             string result = serialize.GetLogText();
             Assert.AreEqual("Der Wert darf nicht NULL sein.\r\nParametername: inputUri\r\n", result);
         }
-
-        [TestMethod(), TestCategory("Validator")]
+        [TestMethod]
+        public void WriteXmlToStringWithNamespaces()
+        {
+            SerializeTool serializer = new SerializeTool();
+            serializer.XmlNamespaces = new XmlSerializerNamespaces();
+            serializer.XmlNamespaces.Add("xsd","http://www.w3.org/2001/XMLSchema");
+            serializer.XmlNamespaces.Add("xsi", "http://www.w3.org/2001/XMLSchema-instance");
+            serializer.XmlNamespaces.Add("n", "http://test/xml");
+            serializer.DefaultNamespace = "http://test/xml";
+            TestObject2 testObject = GetTestObject2();
+            if (serializer.WriteXmlToString(testObject, out string xml))
+            {
+                Assert.AreEqual(OBJ_NS_RESULT , xml);
+            }
+            else
+            {
+                Assert.Fail(serializer.LastError);
+            }
+        }
+        [TestMethod, TestCategory("Validator")]
         public void GetDtdValidatorTest()
         {
             SerializeTool serialize = new SerializeTool();
@@ -264,7 +327,7 @@ namespace EasyXMLSerializer.Tests
 
         }
 
-        [TestMethod(), TestCategory("Validator")]
+        [TestMethod, TestCategory("Validator")]
         public void GetDtdValidatorTest1()
         {
             SerializeTool serialize = new SerializeTool("testObjectToValidate.xml");
@@ -286,7 +349,7 @@ namespace EasyXMLSerializer.Tests
                 Assert.Fail(message);
             }
         }
-        [TestMethod(), TestCategory("Validator")]
+        [TestMethod, TestCategory("Validator")]
         public void GetXsdValidatorTest()
         {
             SerializeTool serialize = new SerializeTool();
@@ -308,7 +371,7 @@ namespace EasyXMLSerializer.Tests
                 Assert.Fail(message);
             }
         }
-        [TestMethod(), TestCategory("Validator")]
+        [TestMethod, TestCategory("Validator")]
         public void GetXmlValidatorFaialTest()
         {
             SerializeTool serialize = new SerializeTool();
