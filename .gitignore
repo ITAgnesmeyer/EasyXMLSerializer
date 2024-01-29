@@ -450,3 +450,11 @@
 /SRC/EasyXMLSerializer/obj/Debug
 /SRC/EasyXMLSerializerVB/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
 /SRC/EasyXMLSerializer/obj
+/SRC/EasyXMLSerializer/bin/Release
+/SRC/EasyXMLSerializerTests/.vs
+/SRC/EasyXMLSerializerVB/.vs
+/SRC/EasyXMLSerializerVB/obj/Debug
+/SRC/EasyXMLSerialzerUWP/.vs
+/SRC/EasyXMLSerializerTests/obj
+/SRC/EasyXMLSerializerVB/bin/Debug/net48
+/SRC/EasyXMLSerializerVB/obj
