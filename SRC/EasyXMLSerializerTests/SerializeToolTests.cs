@@ -282,7 +282,7 @@ namespace EasyXMLSerializer.Tests
             SerializeTool serialize = new SerializeTool();
             TestObject testObject = serialize.ReadXmlFile<TestObject>();
             string result = serialize.GetLogText();
-            Assert.AreEqual("Der Wert darf nicht NULL sein.\r\nParametername: inputUri\r\n", result);
+            Assert.AreEqual("Value cannot be null. (Parameter 'inputUri')\r\n", result);
         }
         [TestMethod]
         public void WriteXmlToStringWithNamespaces()
@@ -391,7 +391,7 @@ namespace EasyXMLSerializer.Tests
                 }
 
                 Assert.IsTrue(message.Length > 0);
-                Assert.IsTrue(message.Contains("Elemente: 'ObjectValue'"));
+                Assert.IsTrue(message.Contains("expected: 'ObjectValue'"));
             }
         }
     }
